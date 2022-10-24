@@ -31,10 +31,58 @@
     </header>
 
     <main>
+        <div class="filtros">
+            <h2 id="cabecera-pasajes"> Busqueda pasajes </h2>
+
+            <fieldset class="tipo-pasaje">
+                <label for="sponsor-propio">
+                    <input type="radio" id="radio-ida-vuelta" required="obligatorio">Ida y vuelta </input>
+                </label>
+
+                <label for="sponsor-general">
+                    <input type="radio" id="radio-ida" required="obligatorio"> Ida </input>
+                </label>
+            </fieldset>
+
+            <div class="filtro-pasaje">
+                <div>
+                    <label for="origen"> Origen
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input class="campos" type="text" id="origen" required="obligatorio"
+                        placeholder="Ingrese origen del pasaje">
+                </div>
+                <div>
+                    <label for="destino"> Destino
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input class="campos" type="text" id="destino" required="obligatorio"
+                        placeholder="Ingrese destino del pasaje">
+                </div>
+
+                <div>
+                    <label for="destino"> Fecha pasaje
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input class="campos" type="date" id="fecha" required="obligatorio"
+                        placeholder="Ingrese fecha en la que desea viajar">
+                </div>
+
+                <div>
+                    <label for="destino"> Cantidad pasajeros
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input class="campos" type="number" id="cantidad-pasajeros" required="obligatorio"
+                        placeholder="Ingrese la cantidad de pasajeros">
+                </div>
+            </div>
+
+            <input class="btn-buscar" type="submit" value="Buscar" onclick=""></input>
+        </div>
         <p>
-            
+
         </p>
-        
+
     </main>
 
     <footer>

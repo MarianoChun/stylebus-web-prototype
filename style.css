@@ -10,8 +10,39 @@
   border-radius: 5px;
 }
 
+.filtros {
+  background-color: rgb(100, 100, 170);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.filtro-pasaje {
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+}
+
+.btn-buscar {
+  border-radius: 5px;
+  float: right;
+}
 nav li {
   display: inline-flex;
+}
+
+.campos {
+  display: flex;
+  justify-content: center;
+  background-color: #fbfbfb; 
+  width: 400px; 
+  height: 20px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #0c0c0c; 
+  margin-top: 10px;  
+  margin-bottom: 10px;
 }
 
 nav a {
