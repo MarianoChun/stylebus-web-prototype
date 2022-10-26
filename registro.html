@@ -1,0 +1,30 @@
+<!--nombre, apellido, domicilio, DNI, fecha de nacimiento, email y contraseña e indicar una forma de pago.
+Pueden registrar una cuenta bancaria,  MercadoPago, generar una factura para pago en efectivo, o utilizar tarjeta de débito o de crédito.-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="registro.css">
+  <title>Formulario Registro</title>
+</head>
+<body>
+  <section class="form-register">
+    <h4>Formulario Registro</h4>
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+    <input class="controls" type="text" name="dni" id="dni" placeholder="Ingrese su DNI">
+    <input class="controls" type="date" id="fecha-nacimiento" required placeholder="Ingrese su fecha de nacimiento">
+    <p>Ingrese datos de su domicilio: </p>
+    <input class="controls" type="text" name="nombre-calle" id="nombre-calle" placeholder="Ingrese nombre de calle">
+    <input class="controls" type="number" min="1" max="100000" name="numero-casa" id="numero-casa" placeholder="Ingrese la altura">
+    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+    <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+    <input class="botons" type="submit" value="Registrar">
+  </section>
+
+</body>
+</html>
