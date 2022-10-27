@@ -46,45 +46,43 @@
                 <h2 id="cabecera-pasajes"> Busqueda pasajes </h2>
     
                 <fieldset class="tipo-pasaje">
-                    <label for="radio-ida-vuelta">
-                        <input type="radio" id="radio-ida-vuelta" required="obligatorio">Ida y vuelta </input>
-                    </label>
-    
-                    <label for="radio-ida">
-                        <input type="radio" id="radio-ida" required="obligatorio"> Ida </input>
-                    </label>
-                </fieldset>
+                    <label for="ida-vuelta" class="label-sponsor"><input type="radio" name="tipo" id="ida-vuelta"
+                        required>Ida y vuelta</label>
+          
+                    <label for="ida" class="label-sponsor"><input type="radio" name="tipo" id="ida"
+                        required>Ida</label>
+                </fieldset>         
     
                 <div class="filtro-pasaje">
                     
                     <div>
                         <label for="origen"> Origen
                         </label>
-                        <input class="campos" type="text" id="origen" required="obligatorio"
+                        <input class="campos" type="text" id="origen" required
                             placeholder="Ingresa desde dónde viajas">
 
                         <label for="destino"> Destino
                         </label>
-                        <input class="campos" type="text" id="destino" required="obligatorio"
+                        <input class="campos" type="text" id="destino" required
                             placeholder="Ingresa hasta dónde viajas">
                     </div>
     
                     <div>
-                        <label for="destino"> Fecha Ida
+                        <label for="ida"> Fecha Ida
                         </label>
-                        <input class="campos" type="date" id="fecha" required="obligatorio"
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="ida" required
                             placeholder="Ida">
 
-                        <label for="destino"> Fecha Vuelta
+                        <label for="vuelta"> Fecha Vuelta
                         </label>
-                        <input class="campos" type="date" id="fecha" required="obligatorio"
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="vuelta" required
                                 placeholder="Vuelta">
                     </div>
     
                     <div>
                         <label for="destino"> Cantidad pasajeros
                         </label>
-                        <input class="campos" type="number" min="1" max="30" id="cantidad-pasajeros" required="obligatorio"
+                        <input class="campos" type="number" min="1" max="30" id="cantidad-pasajeros" required
                             placeholder="Ingrese la cantidad de pasajeros">
                     </div>
                 </div>
