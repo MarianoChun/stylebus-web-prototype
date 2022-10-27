@@ -103,3 +103,15 @@
   border-radius: 5px;
   background-color: #03045E;
 }
+
+.metodos-pago {
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
