@@ -7,19 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Servicio de ómnibus StyleBus</title>
 
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="cabecera">
-            <nav>
+        <div class="cabecera-autogestion">
+            <nav class="nav-autogestion">
+                <ul>
+                    <li>   
+                        <a href="login.html">Iniciar Sesión</a>
+                    </li>
+                    <li>
+                        <a href="carrito.html">Carrito de compras</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="cabecera-principal">
+            <nav class="nav-principal">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="pasajes.html">Pasajes</a></li>
@@ -31,58 +41,57 @@
     </header>
 
     <main>
-        <div class="filtros">
-            <h2 id="cabecera-pasajes"> Busqueda pasajes </h2>
-
-            <fieldset class="tipo-pasaje">
-                <label for="sponsor-propio">
-                    <input type="radio" id="radio-ida-vuelta" required="obligatorio">Ida y vuelta </input>
-                </label>
-
-                <label for="sponsor-general">
-                    <input type="radio" id="radio-ida" required="obligatorio"> Ida </input>
-                </label>
-            </fieldset>
-
-            <div class="filtro-pasaje">
-                <div>
-                    <label for="origen"> Origen
-                        <span class="obligatorio">*</span>
+        <div class="background-filtros">
+            <div class="filtros">
+                <h2 id="cabecera-pasajes"> Busqueda pasajes </h2>
+    
+                <fieldset class="tipo-pasaje">
+                    <label for="radio-ida-vuelta">
+                        <input type="radio" id="radio-ida-vuelta" required="obligatorio">Ida y vuelta </input>
                     </label>
-                    <input class="campos" type="text" id="origen" required="obligatorio"
-                        placeholder="Ingrese origen del pasaje">
-                </div>
-                <div>
-                    <label for="destino"> Destino
-                        <span class="obligatorio">*</span>
+    
+                    <label for="radio-ida">
+                        <input type="radio" id="radio-ida" required="obligatorio"> Ida </input>
                     </label>
-                    <input class="campos" type="text" id="destino" required="obligatorio"
-                        placeholder="Ingrese destino del pasaje">
-                </div>
+                </fieldset>
+    
+                <div class="filtro-pasaje">
+                    
+                    <div>
+                        <label for="origen"> Origen
+                        </label>
+                        <input class="campos" type="text" id="origen" required="obligatorio"
+                            placeholder="Ingresa desde dónde viajas">
 
-                <div>
-                    <label for="destino"> Fecha pasaje
-                        <span class="obligatorio">*</span>
-                    </label>
-                    <input class="campos" type="date" id="fecha" required="obligatorio"
-                        placeholder="Ingrese fecha en la que desea viajar">
-                </div>
+                        <label for="destino"> Destino
+                        </label>
+                        <input class="campos" type="text" id="destino" required="obligatorio"
+                            placeholder="Ingresa hasta dónde viajas">
+                    </div>
+    
+                    <div>
+                        <label for="destino"> Fecha Ida
+                        </label>
+                        <input class="campos" type="date" id="fecha" required="obligatorio"
+                            placeholder="Ida">
 
-                <div>
-                    <label for="destino"> Cantidad pasajeros
-                        <span class="obligatorio">*</span>
-                    </label>
-                    <input class="campos" type="number" id="cantidad-pasajeros" required="obligatorio"
-                        placeholder="Ingrese la cantidad de pasajeros">
+                        <label for="destino"> Fecha Vuelta
+                        </label>
+                        <input class="campos" type="date" id="fecha" required="obligatorio"
+                                placeholder="Vuelta">
+                    </div>
+    
+                    <div>
+                        <label for="destino"> Cantidad pasajeros
+                        </label>
+                        <input class="campos" type="number" min="1" max="30" id="cantidad-pasajeros" required="obligatorio"
+                            placeholder="Ingrese la cantidad de pasajeros">
+                    </div>
                 </div>
+    
+                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick=""></input>
             </div>
-
-            <input class="btn-buscar" type="submit" value="Buscar" onclick=""></input>
         </div>
-        <p>
-
-        </p>
-
     </main>
 
     <footer>
