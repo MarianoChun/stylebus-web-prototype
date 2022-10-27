@@ -63,6 +63,17 @@ Pueden registrar una cuenta bancaria,  MercadoPago, generar una factura para pag
       <span id="mostrar">Mostrar</span>
     </div>
 
+    <div>
+      <p>Seleccione un método de pago</p>
+      <select name="metodo-pago" id="metodo-pago" required>
+        <option value="cc">Tarjeta de crédito</option>
+        <option value="dc">Tarjeta de débito</option>
+        <option value="mp">MercadoPago</option>
+        <option value="tf">Transferencia</option>
+        <option value="ef">Efectivo</option>
+      </select>  
+    </div>
+
     <label>
       <input type="checkbox" required>
       Estoy de acuerdo con <a href="#">Terminos y Condiciones</a>
