@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+    <script src="eventos.js"> </script>
 </head>
 
 <body>
@@ -32,11 +33,18 @@
             <nav class="nav-principal">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
+                     <!-- 
+
                     <li><a href="pasajes.html">Pasajes</a></li>
                     <li><a href="paquetes.html">Paquetes</a></li>
                     <li><a href="excursiones.html">Excursiones</a></li>
+                    -->
+
+                    <li onclick=habilitarFiltroPasajes()> <a href="#">Pasajes</a></li>
+                    <li onclick=habilitarFiltroPaquetes()> <a  href="#">Paquetes</a></li>
+                    <li onclick=habilitarFiltroExcursiones()> <a href="#">Excursiones</a></li>
                 </ul>
-            </nav>
+
         </div>
     </header>
 
@@ -46,7 +54,7 @@
             <!-- 
                 Filtro pasajes
             -->
-            <div class="filtros">
+            <div class="filtros" id="filtro-pasajes">
                 <h2 id="cabecera-pasajes"> Busqueda pasajes </h2>
     
                 <fieldset class="tipo-pasaje">
@@ -96,7 +104,7 @@
             <!-- 
                 Filtro paquetes
             -->
-            <div class="filtros">
+            <div class="filtros" id="filtro-paquetes">
                 <h2 id="cabecera-paquetes"> Busqueda paquetes </h2>
     
                 <fieldset class="tipo-pasaje">
@@ -148,7 +156,7 @@
                 Filtro excursiones
             -->
 
-            <div class="filtros">
+            <div class="filtros" id="filtro-excursiones">
                 <h2 id="cabecera-excursiones"> Busqueda excursiones </h2>      
     
                 <div class="filtro-pasaje">
