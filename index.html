@@ -42,6 +42,10 @@
 
     <main>
         <div class="background-filtros">
+
+            <!-- 
+                Filtro pasajes
+            -->
             <div class="filtros">
                 <h2 id="cabecera-pasajes"> Busqueda pasajes </h2>
     
@@ -80,10 +84,87 @@
                     </div>
     
                     <div>
-                        <label for="destino"> Cantidad pasajeros
+                        <label for="cantidad-pasajeros"> Cantidad pasajeros
                         </label>
                         <input class="campos" type="number" min="1" max="30" id="cantidad-pasajeros" required
                             placeholder="Ingrese la cantidad de pasajeros">
+                    </div>
+                </div>
+    
+                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick=""></input>
+            </div>
+            <!-- 
+                Filtro paquetes
+            -->
+            <div class="filtros">
+                <h2 id="cabecera-paquetes"> Busqueda paquetes </h2>
+    
+                <fieldset class="tipo-pasaje">
+                    <label for="ida-vuelta" class="label-sponsor"><input type="radio" name="tipo" id="ida-vuelta"
+                        required>Ida y vuelta</label>
+          
+                    <label for="ida" class="label-sponsor"><input type="radio" name="tipo" id="ida"
+                        required>Ida</label>
+                </fieldset>         
+    
+                <div class="filtro-pasaje">
+                    
+                    <div>
+                        <label for="origen"> Origen
+                        </label>
+                        <input class="campos" type="text" id="origen" required
+                            placeholder="Ingresa desde dónde viajas">
+
+                        <label for="destino"> Destino
+                        </label>
+                        <input class="campos" type="text" id="destino" required
+                            placeholder="Ingresa hasta dónde viajas">
+                    </div>
+    
+                    <div>
+                        <label for="ida"> Fecha Ida
+                        </label>
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="ida" required
+                            placeholder="Ida">
+
+                        <label for="vuelta"> Fecha Vuelta
+                        </label>
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="vuelta" required
+                                placeholder="Vuelta">
+                    </div>
+    
+                    <div>
+                        <label for="cantidad-excursiones"> Cantidad excursiones
+                        </label>
+                        <input class="campos" type="number" min="1" max="30" id="cantidad-excursiones" required
+                            placeholder="Ingrese la cantidad de excursiones">
+                    </div>
+                </div>
+    
+                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick=""></input>
+            </div>
+
+            <!-- 
+                Filtro excursiones
+            -->
+
+            <div class="filtros">
+                <h2 id="cabecera-excursiones"> Busqueda excursiones </h2>      
+    
+                <div class="filtro-pasaje">
+                    <div>
+                        <label for="ubicacion-excursion"> Ubicación
+                        </label>
+                        <input class="campos" type="text" id="ubicacion-excursion" required
+                            placeholder="Ingresa la ubicación de tu excursión">
+                    </div>
+    
+                    <div>
+                        <label for="fecha-excursion"> Fecha
+                        </label>
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="fecha-excursion" required
+                            placeholder="Fecha de excursión">
+
                     </div>
                 </div>
     
