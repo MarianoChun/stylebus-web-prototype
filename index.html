@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+    
     <script src="eventosIndex.js"> </script>
+    <script src="busquedaService.js"></script>
+    <script src="excursiones.js"></script>
 </head>
 
 <body>
@@ -49,7 +52,7 @@
     </header>
 
     <main>
-        <div class="background-filtros">
+        <div class="background-filtros" id="container-filtros">
 
             <!-- 
                 Filtro pasajes
@@ -176,7 +179,11 @@
                     </div>
                 </div>
     
-                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick=""></input>
+                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" 
+                onclick="mostrarExcursiones(
+                    document.getElementById('ubicacion-excursion').value, 
+                    document.getElementById('fecha-excursion').value)">
+                </input>
             </div>
         </div>
     </main>
