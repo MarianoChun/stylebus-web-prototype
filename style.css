@@ -143,3 +143,35 @@ nav li {
   color:rgba(142, 162, 228, 0.658);
   font-size: 20px;
 }
+
+/*estilos proximamente.html*/
+
+.proximamente {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;       
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+
+.proximamente h1 {
+  font-size: 30px;
+}
+
+.proximamente a {
+  text-decoration: none;
+  color: #03045E;
+  margin-bottom: 3px;
+}
+
+.proximamente a:hover {
+  text-decoration: none;
+  color: #7374d5;
+  margin-bottom: 3px;
+}
