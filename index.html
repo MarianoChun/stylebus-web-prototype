@@ -71,11 +71,11 @@
                     <div>
                         <label for="origen"> Origen
                         </label>
-                        <input class="campos" type="text" id="origen" required placeholder="Ingresa desde dónde viajas">
+                        <input class="campos" type="text" id="pasaje-origen" required placeholder="Ingresa desde dónde viajas">
 
                         <label for="destino"> Destino
                         </label>
-                        <input class="campos" type="text" id="destino" required
+                        <input class="campos" type="text" id="pasaje-destino" required
                             placeholder="Ingresa hasta dónde viajas">
                     </div>
 
@@ -83,29 +83,30 @@
                         <label for="ida"> Fecha Ida
                         </label>
                         <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                            id="pasaje-ida" required placeholder="Ida">
+                            id="pasaje-fecha-ida" required placeholder="Ida">
 
                         <div id="div-campo-pasaje-vuelta">
                             <label for="vuelta"> Fecha Vuelta
                             </label>
                             <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                                id="pasaje-vuelta" required placeholder="Vuelta">
+                                id="pasaje-fecha-vuelta" required placeholder="Vuelta">
                         </div>
                     </div>
 
                     <div>
                         <label for="cantidad-pasajeros"> Cantidad pasajeros
                         </label>
-                        <input class="campos" type="number" min="1" max="30" id="cantidad-pasajeros" required
+                        <input class="campos" type="number" min="1" max="30" id="pasaje-cantidad-pasajeros" required
                             placeholder="Ingrese la cantidad de pasajeros">
                     </div>
                 </div>
 
-                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick="mostrarPasajesIda(
-                    document.getElementById('origen').value, 
-                    document.getElementById('destino').value,
-                    document.getElementById('pasaje-ida').value,
-                    document.getElementById('cantidad-pasajeros').value)"></input>
+                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick="mostrarPasajes(
+                    document.getElementById('pasaje-origen').value, 
+                    document.getElementById('pasaje-destino').value,
+                    document.getElementById('pasaje-fecha-ida').value,
+                    document.getElementById('pasaje-fecha-vuelta').value,
+                    document.getElementById('pasaje-cantidad-pasajeros').value)"></input>
             </div>
             <!-- 
                 Filtro paquetes
@@ -129,11 +130,11 @@
                     <div>
                         <label for="origen"> Origen
                         </label>
-                        <input class="campos" type="text" id="origen" required placeholder="Ingresa desde dónde viajas">
+                        <input class="campos" type="text" id="paquete-origen" required placeholder="Ingresa desde dónde viajas">
 
                         <label for="destino"> Destino
                         </label>
-                        <input class="campos" type="text" id="destino" required
+                        <input class="campos" type="text" id="paquete-destino" required
                             placeholder="Ingresa hasta dónde viajas">
                     </div>
 
@@ -154,12 +155,20 @@
                     <div>
                         <label for="cantidad-excursiones"> Cantidad excursiones
                         </label>
-                        <input class="campos" type="number" min="1" max="30" id="cantidad-excursiones" required
+                        <input class="campos" type="number" min="1" max="30" id="paquete-cantidad-excursiones" required
                             placeholder="Ingrese la cantidad de excursiones">
                     </div>
                 </div>
 
                 <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick=""></input>
+                <!-- function futura para paquetes 
+                    mostrarPasajesIdaVuelta(
+                    document.getElementById('paquete-origen').value, 
+                    document.getElementById('paquete-destino').value,
+                    document.getElementById('paquete-ida').value,
+                    document.getElementById('paquete-vuelta').value,
+                    document.getElementById('paquete-cantidad-pasajeros').value) -->
+                    
             </div>
 
             <!-- 

@@ -6,6 +6,10 @@ function getPasajesIda(){
     return pasajesIda;
 }
 
+function getPasajesIdaVuelta(){
+    return pasajesIdaVuelta;
+}
+
 
 function filtrarExcursionesPorUbicacionYFecha(ubicacion, fecha){
     let excursiones = [];
@@ -20,23 +24,40 @@ function filtrarExcursionesPorUbicacionYFecha(ubicacion, fecha){
     return excursiones;
 }
 
-function filtraPasajesIda(origen, destino, fecha, cantidadPasajeros){
-    console.log("filtrosPasaje");
+function filtrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajeros){
     let pasajes = [];
+    let pasajesFiltrados = [];
 
-    
+    if(fechaVuelta == ''){
+        console.log("fecha vuelta vacia");
+        pasajes = getPasajesIda();
 
-    for(let pasaje of getPasajesIda()) {
-        if(pasaje.origen.toLowerCase() === origen.toLowerCase()
-        && pasaje.destino.toLowerCase() === destino.toLowerCase()
-        && pasaje.fecha === fecha
-        && pasaje.cantidadPasajeros === parseInt(cantidadPasajeros)) {
-            pasajes.push(pasaje);
+        for(let pasaje of pasajes) {
+            if(pasaje.origen.toLowerCase() === origen.toLowerCase()
+            && pasaje.destino.toLowerCase() === destino.toLowerCase()
+            && pasaje.fechaIda === fechaIda
+            && pasaje.cantidadPasajeros === parseInt(cantidadPasajeros)) {
+                pasajesFiltrados.push(pasaje);
+            }
+        }
+    } else {
+        pasajes = getPasajesIdaVuelta();
+        console.log("fecha vuelta no vacia");
+        for(let pasaje of pasajes) {
+            if(pasaje.origen.toLowerCase() === origen.toLowerCase()
+            && pasaje.destino.toLowerCase() === destino.toLowerCase()
+            && pasaje.fechaIda === fechaIda
+            && pasaje.fechaVuelta === fechaVuelta
+            && pasaje.cantidadPasajeros === parseInt(cantidadPasajeros)) {
+                pasajesFiltrados.push(pasaje);
+                console.log("pasa ida vuelta push");
+            }
         }
     }
-
-    return pasajes;
+    
+    return pasajesFiltrados;
 }
+
 
 // function getExcursionPorUbicacionFecha(ubicacion, fecha) {
 //     let excursiones = getExcursiones();

@@ -24,6 +24,7 @@ function habilitarCampoPasajeVuelta(){
 }
 
 function deshabilitarCampoPasajeVuelta(){
+    document.getElementById("pasaje-fecha-vuelta").value = "";
     document.getElementById("div-campo-pasaje-vuelta").style.display = "none";
 }
 
@@ -87,24 +88,35 @@ function mostrarExcursiones(ubicacion, fecha) {
     }
 }
 
-function mostrarPasajesIda(origen, destino, fecha, cantidadPasajeros) {
+function mostrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajeros) {
     var divLista = crearDivListaProductos();
 
     var ul = document.createElement('ul');
-    var pasajes = filtraPasajesIda(origen, destino, fecha, cantidadPasajeros);
-
+    var pasajes = filtrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajeros);
+    console.log("entra mostrar pasajes");
     if (pasajes.length != 0) {
+
+        console.log("pasajes no son vacios");
         for (let pasaje of pasajes) {
             var li = document.createElement('li');
             var button = document.createElement('button');
             button.textContent = 'Agregar a carrito';
 
-            li.innerHTML = 
-            "Origen: " + pasaje.origen + "<br>" + 
-            "Destino: " + pasaje.destino + "<br>" + 
-            "Descripción: " + pasaje.descripcion + "<br>" + 
-            "Fecha ida: " + pasaje.fecha + "<br>" + 
-            "Cantidad de pasajeros: " + pasaje.cantidadPasajeros + "<br>";
+            if(fechaVuelta === '') {
+                li.innerHTML = 
+                "Origen: " + pasaje.origen + "<br>" + 
+                "Destino: " + pasaje.destino + "<br>" + 
+                "Fecha ida: " + pasaje.fechaIda + "<br>" +
+                "Cantidad de pasajeros: " + pasaje.cantidadPasajeros + "<br>";
+            } else {
+                li.innerHTML = 
+                "Origen: " + pasaje.origen + "<br>" + 
+                "Destino: " + pasaje.destino + "<br>" + 
+                "Fecha ida: " + pasaje.fechaIda + "<br>" +
+                "Fecha vuelta: " + pasaje.fechaVuelta + "<br>" + 
+                "Cantidad de pasajeros: " + pasaje.cantidadPasajeros + "<br>";
+            }
+
             li.appendChild(button);
             ul.appendChild(li);
         }
