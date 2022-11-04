@@ -3,6 +3,38 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("filtro-excursiones").style.display = "none";
 });
 
+document.getElementById("radio-pasaje-ida-vuelta").addEventListener("click", function () {
+    habilitarCampoPasajeVuelta();
+});
+
+document.getElementById("radio-pasaje-ida").addEventListener("click", function () {
+    deshabilitarCampoPasajeVuelta();
+});
+
+document.getElementById("radio-paquete-ida-vuelta").addEventListener("click", function () {
+    habilitarCampoPaqueteVuelta();
+});
+
+document.getElementById("radio-paquete-ida").addEventListener("click", function () {
+    deshabilitarCampoPaqueteVuelta();
+});
+
+function habilitarCampoPasajeVuelta(){
+    document.getElementById("div-campo-pasaje-vuelta").style.display = "";
+}
+
+function deshabilitarCampoPasajeVuelta(){
+    document.getElementById("div-campo-pasaje-vuelta").style.display = "none";
+}
+
+function habilitarCampoPaqueteVuelta(){
+    document.getElementById("div-campo-paquete-vuelta").style.display = "";
+}
+
+function deshabilitarCampoPaqueteVuelta(){
+    document.getElementById("div-campo-paquete-vuelta").style.display = "none";
+}
+
 function crearDivListaProductos(){
     eliminarDiv("lista-excursiones");
 
