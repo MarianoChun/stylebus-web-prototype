@@ -14,7 +14,7 @@
     
     <script src="eventosIndex.js"> </script>
     <script src="busquedaService.js"></script>
-    <script src="excursiones.js"></script>
+    <script src="datosStyleBus.js"></script>
 </head>
 
 <body>
@@ -61,10 +61,10 @@
                 <h2 id="cabecera-pasajes"> Busqueda pasajes </h2>
     
                 <fieldset class="tipo-pasaje">
-                    <label for="ida-vuelta" class="label-sponsor"><input type="radio" name="tipo" id="ida-vuelta"
+                    <label for="ida-vuelta" class="label-sponsor"><input type="radio" name="tipo" id="radio-ida-vuelta"
                         required>Ida y vuelta</label>
           
-                    <label for="ida" class="label-sponsor"><input type="radio" name="tipo" id="ida"
+                    <label for="ida" class="label-sponsor"><input type="radio" name="tipo" id="radio-ida"
                         required>Ida</label>
                 </fieldset>         
     
@@ -85,12 +85,12 @@
                     <div>
                         <label for="ida"> Fecha Ida
                         </label>
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="ida" required
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="pasaje-ida" required
                             placeholder="Ida">
 
                         <label for="vuelta"> Fecha Vuelta
                         </label>
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="vuelta" required
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="pasaje-vuelta" required
                                 placeholder="Vuelta">
                     </div>
     
@@ -102,7 +102,12 @@
                     </div>
                 </div>
     
-                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick=""></input>
+                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" 
+                onclick="mostrarPasajesIda(
+                    document.getElementById('origen').value, 
+                    document.getElementById('destino').value,
+                    document.getElementById('pasaje-ida').value,
+                    document.getElementById('cantidad-pasajeros').value)"></input>
             </div>
             <!-- 
                 Filtro paquetes
@@ -135,12 +140,12 @@
                     <div>
                         <label for="ida"> Fecha Ida
                         </label>
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="ida" required
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="paquete-ida" required
                             placeholder="Ida">
 
                         <label for="vuelta"> Fecha Vuelta
                         </label>
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="vuelta" required
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="paquete-vuelta" required
                                 placeholder="Vuelta">
                     </div>
     
