@@ -10,6 +10,14 @@ function getPasajesIdaVuelta(){
     return pasajesIdaVuelta;
 }
 
+function getPaquetesIda(){
+    return paquetesIda;
+}
+
+function getPaquetesIdaVuelta(){
+    return paquetesIdaVuelta;
+}
+
 
 function filtrarExcursionesPorUbicacionYFecha(ubicacion, fecha){
     let excursiones = [];
@@ -58,7 +66,40 @@ function filtrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajero
     return pasajesFiltrados;
 }
 
+function getCantidadExcursiones(excursiones){
+    return excursiones.length;
+}
 
+function filtrarPaquetes(origen, destino, fechaIda, fechaVuelta, cantidadExcursiones){
+    let paquetes = [];
+    let paquetesFiltrados = [];
+
+    if(fechaVuelta == ''){
+        paquetes = getPaquetesIda();
+
+        for(let paquete of paquetes) {
+            if(paquete.origen.toLowerCase() === origen.toLowerCase()
+            && paquete.destino.toLowerCase() === destino.toLowerCase()
+            && paquete.fechaIda === fechaIda
+            && getCantidadExcursiones(paquete['excursiones']) === parseInt(cantidadExcursiones)) {
+                paquetesFiltrados.push(paquete);
+            }
+        }
+    } else {
+        paquetes = getPaquetesIdaVuelta();
+        for(let paquete of paquetes) {
+            if(paquete.origen.toLowerCase() === origen.toLowerCase()
+            && paquete.destino.toLowerCase() === destino.toLowerCase()
+            && paquete.fechaIda === fechaIda
+            && paquete.fechaVuelta === fechaVuelta
+            && getCantidadExcursiones(paquete['excursiones']) === parseInt(cantidadExcursiones)) {
+                paquetesFiltrados.push(paquete);
+            }
+        }
+    }
+    
+    return paquetesFiltrados;
+}
 // function getExcursionPorUbicacionFecha(ubicacion, fecha) {
 //     let excursiones = getExcursiones();
 

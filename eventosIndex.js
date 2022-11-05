@@ -138,6 +138,56 @@ function mostrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajero
     }
 }
 
+function mostrarPaquetes(origen, destino, fechaIda, fechaVuelta, cantidadExcursiones) {
+    var divLista = crearDivListaProductos();
+
+    var ul = document.createElement('ul');
+    var paquetes = filtrarPaquetes(origen, destino, fechaIda, fechaVuelta, cantidadExcursiones);
+    if (paquetes.length != 0) {
+
+        console.log("pasajes no son vacios");
+        for (let paquete of paquetes) {
+            var li = document.createElement('li');
+            var button = document.createElement('button');
+            button.textContent = 'Agregar a carrito';
+
+            if(fechaVuelta === '') {
+                li.innerHTML = 
+                "Origen: " + paquete.origen + "<br>" + 
+                "Destino: " + paquete.destino + "<br>" + 
+                "Fecha ida: " + paquete.fechaIda + "<br>" +
+                getExcursionesString(paquete.excursiones);
+            } else {
+                li.innerHTML = 
+                "Origen: " + paquete.origen + "<br>" + 
+                "Destino: " + paquete.destino + "<br>" + 
+                "Fecha ida: " + paquete.fechaIda + "<br>" +
+                "Fecha vuelta: " + paquete.fechaVuelta + "<br>" + 
+                getExcursionesString(paquete.excursiones);
+            }
+
+            li.appendChild(button);
+            ul.appendChild(li);
+        }
+
+        divLista.appendChild(ul);
+        document.getElementById('container-filtros').appendChild(divLista);
+
+    } else {
+        eliminarDiv("lista-excursiones");
+    }
+}
+
+function getExcursionesString(excursiones){
+    let excursionesString = "<pre>Excursiones: <br>";
+
+    for(let excursion of excursiones){
+        excursionesString += "    " + excursion.descripcion + " <br>";
+    }
+
+    excursionesString += "<pre>";
+    return excursionesString;
+}
 function eliminarDiv(nombreDiv) {
     var div = document.getElementById(nombreDiv);
     if (div != null) {

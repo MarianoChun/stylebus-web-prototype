@@ -133,13 +133,13 @@
                         <label for="ida"> Fecha Ida
                         </label>
                         <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                            id="paquete-ida" required placeholder="Ida">
+                            id="paquete-fecha-ida" required placeholder="Ida">
 
                         <div id="div-campo-paquete-vuelta">
                         <label for="vuelta"> Fecha Vuelta
                         </label>
                         <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                            id="paquete-vuelta" required placeholder="Vuelta">
+                            id="paquete-fecha-vuelta" required placeholder="Vuelta">
                         </div>
                     </div>
 
@@ -151,15 +151,13 @@
                     </div>
                 </div>
 
-                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick=""></input>
-                <!-- function futura para paquetes 
-                    mostrarPasajesIdaVuelta(
+                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick="mostrarPaquetes(
                     document.getElementById('paquete-origen').value, 
                     document.getElementById('paquete-destino').value,
-                    document.getElementById('paquete-ida').value,
-                    document.getElementById('paquete-vuelta').value,
-                    document.getElementById('paquete-cantidad-pasajeros').value) -->
-                    
+                    document.getElementById('paquete-fecha-ida').value,
+                    document.getElementById('paquete-fecha-vuelta').value,
+                    document.getElementById('paquete-cantidad-excursiones').value)"></input>
+   
             </div>
 
             <!-- 
@@ -194,14 +192,15 @@
         </div>
 
 
-        <script src="eventosIndex.js"> </script>
-        <script src="busquedaService.js"></script>
-        <script src="datosStyleBus.js"></script>
+        
     </main>
 
     <footer>
         <p class="copyright">Copyright &copy Escalada, Chun, Fariña, Correa - 2022</p>
     </footer>
+<script src="eventosIndex.js"> </script>
+<script src="busquedaService.js"></script>
+<script src="datosStyleBus.js"></script>
 
 </body>
 
