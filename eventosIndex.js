@@ -26,7 +26,6 @@ function habilitarCampoPasajeVuelta() {
 }
 
 function deshabilitarCampoPasajeVuelta() {
-    document.getElementById("pasaje-fecha-vuelta").value = "";
     var checkFecha = document.getElementById("pasaje-fecha-vuelta");
     checkFecha.value = "";
     checkFecha.disabled = true;
@@ -39,15 +38,10 @@ function habilitarCampoPaqueteVuelta() {
     checkFecha.style.backgroundColor = "rgb(255, 255, 255)";
 }
 
-<<<<<<< HEAD
+
 function deshabilitarCampoPaqueteVuelta() {
-    document.getElementById("paquete-fecha-vuelta").value = "";
     var checkFecha = document.getElementById("paquete-fecha-vuelta");
-=======
-function deshabilitarCampoPaqueteVuelta(){
-    var checkFecha = document.getElementById("paquete-vuelta");
     checkFecha.value = "";
->>>>>>> cc3c64975b6258802e80f4c5efb4b7c0168a83bb
     checkFecha.disabled = true;
     checkFecha.style.backgroundColor = "rgb(171, 171, 171)";
 }
