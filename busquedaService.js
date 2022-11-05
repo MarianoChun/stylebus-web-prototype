@@ -23,7 +23,7 @@ function filtrarExcursionesPorUbicacionYFecha(ubicacion, fecha){
     let excursiones = [];
 
     for(let excursion of getExcursiones()) {
-        if(excursion.ubicacion.toLowerCase() === ubicacion.toLowerCase() && excursion.fecha === fecha) {
+        if(excursion.ubicacion.toLowerCase() === ubicacion.toLowerCase() || excursion.fecha === fecha) {
             
             excursiones.push(excursion);
         }
