@@ -20,20 +20,27 @@ document.getElementById("radio-paquete-ida").addEventListener("click", function 
 });
 
 function habilitarCampoPasajeVuelta(){
-    document.getElementById("div-campo-pasaje-vuelta").style.display = "";
+    var checkFecha = document.getElementById("pasaje-fecha-vuelta");
+    checkFecha.disabled = false;
+    checkFecha.style.backgroundColor = "rgb(255, 255, 255)";
 }
 
 function deshabilitarCampoPasajeVuelta(){
-    document.getElementById("pasaje-fecha-vuelta").value = "";
-    document.getElementById("div-campo-pasaje-vuelta").style.display = "none";
+    var checkFecha = document.getElementById("pasaje-fecha-vuelta");
+    checkFecha.disabled = true;
+    checkFecha.style.backgroundColor = "rgb(171, 171, 171)";
 }
 
 function habilitarCampoPaqueteVuelta(){
-    document.getElementById("div-campo-paquete-vuelta").style.display = "";
+    var checkFecha = document.getElementById("paquete-vuelta");
+    checkFecha.disabled = false;
+    checkFecha.style.backgroundColor = "rgb(255, 255, 255)";
 }
 
 function deshabilitarCampoPaqueteVuelta(){
-    document.getElementById("div-campo-paquete-vuelta").style.display = "none";
+    var checkFecha = document.getElementById("paquete-vuelta");
+    checkFecha.disabled = true;
+    checkFecha.style.backgroundColor = "rgb(171, 171, 171)";
 }
 
 function crearDivListaProductos(){
