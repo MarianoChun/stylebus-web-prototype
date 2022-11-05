@@ -26,29 +26,29 @@ Pueden registrar una cuenta bancaria,  MercadoPago, generar una factura para pag
 
     <p>Ingrese sus datos personales: </p>
     <label for="nombres">
-      <input class="controls" type="text" name="nombres" id="nombres" required placeholder="Nombre">
+      <input class="controls" type="text" minlength="1" maxlength="50" name="nombres" id="nombres" required placeholder="Nombre">
     </label>
     
     <label for="apellidos">
-      <input class="controls" type="text" name="apellidos" id="apellidos" required placeholder="Apellido">
+      <input class="controls" type="text" minlength="1" maxlength="50" name="apellidos" id="apellidos" required placeholder="Apellido">
     </label>
     
     <label for="dni">
-      <input class="controls" type="text" name="dni" id="dni" required placeholder="DNI">
+      <input class="controls" type="text" name="dni" id="dni" required placeholder="DNI" pattern="[0-9]{7,8}">
     </label>
     
     <label for="fecha-nacimiento">
-      <input class="controls" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="fecha-nacimiento" required placeholder="Fecha de nacimiento">
+      <input class="controls" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="fecha-nacimiento" min="1900-01-01" max="" onclick="fechaMaximaNacimiento()" required placeholder="Fecha de nacimiento">
     </label>
     
     <p>Ingrese datos de su domicilio: </p>
     
     <label for="nombre-calle">
-      <input class="controls" type="text" name="nombre-calle" id="nombre-calle" required placeholder="Calle">
+      <input class="controls" type="text" minlength="1" maxlength="50" name="nombre-calle" id="nombre-calle" required placeholder="Calle">
     </label>
     
     <label for="numero-casa">
-      <input class="controls" type="number" min="1" max="100000" name="numero-casa" id="numero-casa" required placeholder="Altura">
+      <input class="controls" type="number" min="1" max="99999999" name="numero-casa" id="numero-casa" required placeholder="Altura">
     </label>
     
     <p>Ingrese datos de registro: </p>

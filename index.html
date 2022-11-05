@@ -74,13 +74,13 @@
                         <label for="ida"> Fecha Ida
                         </label>
                         <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                            id="pasaje-fecha-ida" required placeholder="Ida">
+                            id="pasaje-fecha-ida" min="" max="" onclick="rangoFecha()" required placeholder="Ida">
 
                         <div id="div-campo-pasaje-vuelta">
                             <label for="vuelta"> Fecha Vuelta
                             </label>
                             <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                                id="pasaje-fecha-vuelta" required placeholder="Vuelta">
+                                id="pasaje-fecha-vuelta" min="" max="" onclick="rangoFecha()" required placeholder="Vuelta">
                         </div>
                     </div>
 
@@ -173,7 +173,7 @@
                     <div>
                         <label for="ubicacion-excursion"> Ubicación
                         </label>
-                        <input class="campos" type="text" id="ubicacion-excursion" required
+                        <input class="campos excursiones" type="text" id="ubicacion-excursion" required
                             placeholder="Ingresa la ubicación de tu excursión">
                     </div>
 
