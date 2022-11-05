@@ -107,11 +107,15 @@
 .metodos-pago {
   text-align: center;
   cursor: pointer;
-  border-radius: 5px;
-  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#metodo-pago-select {
+  width: 200px;
+  border-radius: 5px;
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
 }
