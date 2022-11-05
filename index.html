@@ -9,12 +9,8 @@
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
-    
-    <script src="eventosIndex.js"> </script>
-    <script src="busquedaService.js"></script>
-    <script src="excursiones.js"></script>
 </head>
 
 <body>
@@ -22,7 +18,7 @@
         <div class="cabecera-autogestion">
             <nav class="nav-autogestion">
                 <ul>
-                    <li>   
+                    <li>
                         <a href="login.html">Iniciar sesión</a>
                     </li>
                     <li>
@@ -39,7 +35,6 @@
                     <li onclick=habilitarFiltroPaquetes()> <a  href="#paquetes">Paquetes</a></li>
                     <li onclick=habilitarFiltroExcursiones()> <a href="#excursiones">Excursiones</a></li>
                 </ul>
-
         </div>
     </header>
 
@@ -51,100 +46,120 @@
             -->
             <div class="filtros" id="filtro-pasajes">
                 <h2 id="cabecera-pasajes"> Busqueda pasajes </h2>
-    
+
                 <fieldset class="tipo-pasaje">
-                    <label for="ida-vuelta" class="label-sponsor"><input type="radio" name="tipo" id="ida-vuelta"
-                        required>Ida y vuelta</label>
-          
-                    <label for="ida" class="label-sponsor"><input type="radio" name="tipo" id="ida"
-                        required>Ida</label>
-                </fieldset>         
-    
+                    <form>
+                        <label for="ida-vuelta" class="label-sponsor"><input type="radio" name="tipo"
+                                id="radio-pasaje-ida-vuelta" required checked>Ida y vuelta</label>
+
+                        <label for="ida" class="label-sponsor"><input type="radio" name="tipo" id="radio-pasaje-ida"
+                                required>Ida</label>
+                    </form>
+                </fieldset>
+
                 <div class="filtro-pasaje">
-                    
+
                     <div>
                         <label for="origen"> Origen
                         </label>
-                        <input class="campos" type="text" id="origen" required
-                            placeholder="Ingresa desde dónde viajas">
+                        <input class="campos" type="text" id="pasaje-origen" required placeholder="Ingresa desde dónde viajas">
 
                         <label for="destino"> Destino
                         </label>
-                        <input class="campos" type="text" id="destino" required
+                        <input class="campos" type="text" id="pasaje-destino" required
                             placeholder="Ingresa hasta dónde viajas">
                     </div>
-    
+
                     <div>
                         <label for="ida"> Fecha Ida
                         </label>
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="ida" required
-                            placeholder="Ida">
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                            id="pasaje-fecha-ida" required placeholder="Ida">
 
-                        <label for="vuelta"> Fecha Vuelta
-                        </label>
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="vuelta" required
-                                placeholder="Vuelta">
+                        <div id="div-campo-pasaje-vuelta">
+                            <label for="vuelta"> Fecha Vuelta
+                            </label>
+                            <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                                id="pasaje-fecha-vuelta" required placeholder="Vuelta">
+                        </div>
                     </div>
-    
+
                     <div>
                         <label for="cantidad-pasajeros"> Cantidad pasajeros
                         </label>
-                        <input class="campos" type="number" min="1" max="30" id="cantidad-pasajeros" required
+                        <input class="campos" type="number" min="1" max="30" id="pasaje-cantidad-pasajeros" required
                             placeholder="Ingrese la cantidad de pasajeros">
                     </div>
                 </div>
-    
-                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick=""></input>
+
+                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick="mostrarPasajes(
+                    document.getElementById('pasaje-origen').value, 
+                    document.getElementById('pasaje-destino').value,
+                    document.getElementById('pasaje-fecha-ida').value,
+                    document.getElementById('pasaje-fecha-vuelta').value,
+                    document.getElementById('pasaje-cantidad-pasajeros').value)"></input>
             </div>
             <!-- 
                 Filtro paquetes
             -->
             <div class="filtros" id="filtro-paquetes">
                 <h2 id="cabecera-paquetes"> Busqueda paquetes </h2>
-    
+
                 <fieldset class="tipo-pasaje">
-                    <label for="ida-vuelta" class="label-sponsor"><input type="radio" name="tipo" id="ida-vuelta"
-                        required>Ida y vuelta</label>
-          
-                    <label for="ida" class="label-sponsor"><input type="radio" name="tipo" id="ida"
-                        required>Ida</label>
-                </fieldset>         
-    
+                    <form>
+                        <label for="ida-vuelta" class="label-sponsor"><input type="radio" name="tipo" id="radio-paquete-ida-vuelta"
+                                required checked>Ida y
+                            vuelta</label>
+
+                        <label for="ida" class="label-sponsor"><input type="radio" name="tipo" id="radio-paquete-ida"
+                                required>Ida</label>
+                    </form>
+                </fieldset>
+
                 <div class="filtro-pasaje">
-                    
+
                     <div>
                         <label for="origen"> Origen
                         </label>
-                        <input class="campos" type="text" id="origen" required
-                            placeholder="Ingresa desde dónde viajas">
+                        <input class="campos" type="text" id="paquete-origen" required placeholder="Ingresa desde dónde viajas">
 
                         <label for="destino"> Destino
                         </label>
-                        <input class="campos" type="text" id="destino" required
+                        <input class="campos" type="text" id="paquete-destino" required
                             placeholder="Ingresa hasta dónde viajas">
                     </div>
-    
+
                     <div>
                         <label for="ida"> Fecha Ida
                         </label>
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="ida" required
-                            placeholder="Ida">
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                            id="paquete-ida" required placeholder="Ida">
 
+                        <div id="div-campo-paquete-vuelta">
                         <label for="vuelta"> Fecha Vuelta
                         </label>
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="vuelta" required
-                                placeholder="Vuelta">
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                            id="paquete-vuelta" required placeholder="Vuelta">
+                        </div>
                     </div>
-    
+
                     <div>
                         <label for="cantidad-excursiones"> Cantidad excursiones
                         </label>
-                        <input class="campos" type="number" min="1" max="30" id="cantidad-excursiones" required
+                        <input class="campos" type="number" min="1" max="30" id="paquete-cantidad-excursiones" required
                             placeholder="Ingrese la cantidad de excursiones">
                     </div>
                 </div>
-    
+
                 <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick=""></input>
+                <!-- function futura para paquetes 
+                    mostrarPasajesIdaVuelta(
+                    document.getElementById('paquete-origen').value, 
+                    document.getElementById('paquete-destino').value,
+                    document.getElementById('paquete-ida').value,
+                    document.getElementById('paquete-vuelta').value,
+                    document.getElementById('paquete-cantidad-pasajeros').value) -->
+                    
             </div>
 
             <!-- 
@@ -152,8 +167,8 @@
             -->
 
             <div class="filtros" id="filtro-excursiones">
-                <h2 id="cabecera-excursiones"> Busqueda excursiones </h2>      
-    
+                <h2 id="cabecera-excursiones"> Busqueda excursiones </h2>
+
                 <div class="filtro-pasaje">
                     <div>
                         <label for="ubicacion-excursion"> Ubicación
@@ -161,23 +176,27 @@
                         <input class="campos" type="text" id="ubicacion-excursion" required
                             placeholder="Ingresa la ubicación de tu excursión">
                     </div>
-    
+
                     <div>
                         <label for="fecha-excursion"> Fecha
                         </label>
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="fecha-excursion" required
-                            placeholder="Fecha de excursión">
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                            id="fecha-excursion" required placeholder="Fecha de excursión">
 
                     </div>
                 </div>
-    
-                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" 
-                onclick="mostrarExcursiones(
+
+                <input class="btn-buscar" type="submit" value="&#x1f50d;&#xfe0e; Buscar" onclick="mostrarExcursiones(
                     document.getElementById('ubicacion-excursion').value, 
                     document.getElementById('fecha-excursion').value)">
                 </input>
             </div>
         </div>
+
+
+        <script src="eventosIndex.js"> </script>
+        <script src="busquedaService.js"></script>
+        <script src="datosStyleBus.js"></script>
     </main>
 
     <footer>
