@@ -19,26 +19,28 @@ document.getElementById("radio-paquete-ida").addEventListener("click", function 
     deshabilitarCampoPaqueteVuelta();
 });
 
-function habilitarCampoPasajeVuelta(){
+function habilitarCampoPasajeVuelta() {
     var checkFecha = document.getElementById("pasaje-fecha-vuelta");
     checkFecha.disabled = false;
     checkFecha.style.backgroundColor = "rgb(255, 255, 255)";
 }
 
-function deshabilitarCampoPasajeVuelta(){
+function deshabilitarCampoPasajeVuelta() {
+    document.getElementById("pasaje-fecha-vuelta").value = "";
     var checkFecha = document.getElementById("pasaje-fecha-vuelta");
     checkFecha.disabled = true;
     checkFecha.style.backgroundColor = "rgb(171, 171, 171)";
 }
 
-function habilitarCampoPaqueteVuelta(){
-    var checkFecha = document.getElementById("paquete-vuelta");
+function habilitarCampoPaqueteVuelta() {
+    var checkFecha = document.getElementById("paquete-fecha-vuelta");
     checkFecha.disabled = false;
     checkFecha.style.backgroundColor = "rgb(255, 255, 255)";
 }
 
-function deshabilitarCampoPaqueteVuelta(){
-    var checkFecha = document.getElementById("paquete-vuelta");
+function deshabilitarCampoPaqueteVuelta() {
+    document.getElementById("paquete-fecha-vuelta").value = "";
+    var checkFecha = document.getElementById("paquete-fecha-vuelta");
     checkFecha.disabled = true;
     checkFecha.style.backgroundColor = "rgb(171, 171, 171)";
 }
