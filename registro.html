@@ -26,11 +26,11 @@ Pueden registrar una cuenta bancaria,  MercadoPago, generar una factura para pag
 
     <p>Ingrese sus datos personales: </p>
     <label for="nombres">
-      <input class="controls" type="text" name="nombres" id="nombres" required placeholder="Nombre" pattern="[a-zA-Z]{1,50}">
+      <input class="controls" type="text" name="nombres" id="nombres" required placeholder="Nombre" pattern="[a-zA-Z\s]{1,50}">
     </label>
     
     <label for="apellidos">
-      <input class="controls" type="text" name="apellidos" id="apellidos" required placeholder="Apellido" pattern="[a-zA-Z]{1,50}">
+      <input class="controls" type="text" name="apellidos" id="apellidos" required placeholder="Apellido" pattern="[a-zA-Z\s]{1,50}">
     </label>
     
     <label for="dni"> 
@@ -44,7 +44,7 @@ Pueden registrar una cuenta bancaria,  MercadoPago, generar una factura para pag
     <p>Ingrese datos de su domicilio: </p>
     
     <label for="nombre-calle">
-      <input class="controls" type="text" name="nombre-calle" id="nombre-calle" required placeholder="Calle" pattern="[a-zA-Z]{1,50}">
+      <input class="controls" type="text" name="nombre-calle" id="nombre-calle" required placeholder="Calle" pattern="[A-Za-z\s]{1,50}">
     </label>
     
     <label for="numero-casa">
