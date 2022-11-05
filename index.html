@@ -49,46 +49,53 @@
 
                 <fieldset class="tipo-pasaje">
                     <form>
-                        <label for="ida-vuelta" class="label-sponsor"><input type="radio" name="tipo"
-                                id="radio-pasaje-ida-vuelta" required checked>Ida y vuelta</label>
+                        <label for="radio-pasaje-ida-vuelta" class="label-sponsor">
+                            <input type="radio" name="tipo" id="radio-pasaje-ida-vuelta" required checked>
+                            Ida y vuelta
+                        </label>
 
-                        <label for="ida" class="label-sponsor"><input type="radio" name="tipo" id="radio-pasaje-ida"
-                                required>Ida</label>
+                        <label for="radio-pasaje-ida" class="label-sponsor">
+                            <input type="radio" name="tipo" id="radio-pasaje-ida" required>
+                            Ida
+                        </label>
                     </form>
                 </fieldset>
 
                 <div class="filtro-pasaje">
-
                     <div>
-                        <label for="origen"> Origen
+                        <label for="pasaje-origen">
+                            Origen
+                            <input class="campos" type="text" id="pasaje-origen" required 
+                            placeholder="Ingresa desde dónde viajas"> 
                         </label>
-                        <input class="campos" type="text" id="pasaje-origen" required placeholder="Ingresa desde dónde viajas">
 
-                        <label for="destino"> Destino
+                        <label for="pasaje-destino"> 
+                            Destino
+                            <input class="campos" type="text" id="pasaje-destino" required
+                            placeholder="Ingresa hasta dónde viajas"> 
                         </label>
-                        <input class="campos" type="text" id="pasaje-destino" required
-                            placeholder="Ingresa hasta dónde viajas">
                     </div>
 
                     <div>
-                        <label for="ida"> Fecha Ida
+                        <label for="pasaje-fecha-ida"> Fecha Ida
+                            <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                            id="pasaje-fecha-ida" min="" max="" onclick="rangoFecha()" required placeholder="Ida">
                         </label>
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                            id="pasaje-fecha-ida" required placeholder="Ida">
 
                         <div id="div-campo-pasaje-vuelta">
-                            <label for="vuelta"> Fecha Vuelta
+                            <label for="pasaje-fecha-vuelta"> Fecha Vuelta
+                                <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                                id="pasaje-fecha-vuelta" min="" max="" onclick="rangoFecha()" required placeholder="Vuelta">
                             </label>
-                            <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                                id="pasaje-fecha-vuelta" required placeholder="Vuelta">
                         </div>
                     </div>
 
                     <div>
-                        <label for="cantidad-pasajeros"> Cantidad pasajeros
-                        </label>
-                        <input class="campos" type="number" min="1" max="30" id="pasaje-cantidad-pasajeros" required
+                        <label for="pasaje-cantidad-pasajeros"> 
+                            Cantidad pasajeros
+                            <input class="campos" type="number" min="1" max="30" id="pasaje-cantidad-pasajeros" required
                             placeholder="Ingrese la cantidad de pasajeros">
+                        </label>
                     </div>
                 </div>
 
@@ -107,11 +114,11 @@
 
                 <fieldset class="tipo-pasaje">
                     <form>
-                        <label for="ida-vuelta" class="label-sponsor"><input type="radio" name="tipo" id="radio-paquete-ida-vuelta"
+                        <label for="radio-paquete-ida-vuelta" class="label-sponsor"><input type="radio" name="tipo" id="radio-paquete-ida-vuelta"
                                 required checked>Ida y
                             vuelta</label>
 
-                        <label for="ida" class="label-sponsor"><input type="radio" name="tipo" id="radio-paquete-ida"
+                        <label for="radio-paquete-ida" class="label-sponsor"><input type="radio" name="tipo" id="radio-paquete-ida"
                                 required>Ida</label>
                     </form>
                 </fieldset>
@@ -119,14 +126,17 @@
                 <div class="filtro-pasaje">
 
                     <div>
-                        <label for="origen"> Origen
+                        <label for="paquete-origen"> 
+                            Origen
+                            <input class="campos" type="text" id="paquete-origen" required placeholder="Ingresa desde dónde viajas">
                         </label>
-                        <input class="campos" type="text" id="paquete-origen" required placeholder="Ingresa desde dónde viajas">
 
-                        <label for="destino"> Destino
-                        </label>
-                        <input class="campos" type="text" id="paquete-destino" required
+                        <label for="paquete-destino"> 
+                            Destino
+                            <input class="campos" type="text" id="paquete-destino" required
                             placeholder="Ingresa hasta dónde viajas">
+                        </label>
+                       
                     </div>
 
                     <div>
@@ -144,10 +154,11 @@
                     </div>
 
                     <div>
-                        <label for="cantidad-excursiones"> Cantidad excursiones
-                        </label>
-                        <input class="campos" type="number" min="1" max="30" id="paquete-cantidad-excursiones" required
+                        <label for="paquete-cantidad-excursione"> 
+                            Cantidad excursiones
+                            <input class="campos" type="number" min="1" max="30" id="paquete-cantidad-excursiones" required
                             placeholder="Ingrese la cantidad de excursiones">
+                        </label>
                     </div>
                 </div>
 
@@ -169,18 +180,19 @@
 
                 <div class="filtro-pasaje">
                     <div>
-                        <label for="ubicacion-excursion"> Ubicación
-                        </label>
-                        <input class="campos" type="text" id="ubicacion-excursion" required
+                        <label for="ubicacion-excursion"> 
+                            Ubicación
+                            <input class="campos excursiones" type="text" id="ubicacion-excursion" required
                             placeholder="Ingresa la ubicación de tu excursión">
+                        </label>
                     </div>
 
                     <div>
-                        <label for="fecha-excursion"> Fecha
-                        </label>
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                        <label for="fecha-excursion"> 
+                            Fecha
+                            <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
                             id="fecha-excursion" required placeholder="Fecha de excursión">
-
+                        </label>
                     </div>
                 </div>
 

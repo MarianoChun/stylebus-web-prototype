@@ -135,6 +135,11 @@ nav li {
   border: 0;
 }
 
+.campos.excursiones {
+  width: 240px; 
+  height: 40px; 
+}
+
 .nav-autogestion a:hover {
   color:#a5a7fa;
 }

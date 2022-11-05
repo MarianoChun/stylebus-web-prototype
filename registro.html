@@ -18,7 +18,7 @@ Pueden registrar una cuenta bancaria,  MercadoPago, generar una factura para pag
 
 </head>
 <body>
-  <form class="form-register" method="POST"> 
+  <form class="form-register"> 
 
     <div class="titulo">
       Formulario de Registro
@@ -26,46 +26,46 @@ Pueden registrar una cuenta bancaria,  MercadoPago, generar una factura para pag
 
     <p>Ingrese sus datos personales: </p>
     <label for="nombres">
-      <input class="controls" type="text" name="nombres" id="nombres" required placeholder="Nombre">
+      <input class="controls" type="text" name="nombres" id="nombres" required placeholder="Nombre" pattern="[a-zA-Z\s]{1,50}">
     </label>
     
     <label for="apellidos">
-      <input class="controls" type="text" name="apellidos" id="apellidos" required placeholder="Apellido">
+      <input class="controls" type="text" name="apellidos" id="apellidos" required placeholder="Apellido" pattern="[a-zA-Z\s]{1,50}">
     </label>
     
-    <label for="dni">
-      <input class="controls" type="text" name="dni" id="dni" required placeholder="DNI">
+    <label for="dni"> 
+      <input class="controls" type="text" name="dni" id="dni" required placeholder="DNI. Ej.: 12345678" pattern="[0-9]{7,8}">
     </label>
     
     <label for="fecha-nacimiento">
-      <input class="controls" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="fecha-nacimiento" required placeholder="Fecha de nacimiento">
+      <input class="controls" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="fecha-nacimiento" min="1900-01-01" max="" onclick="fechaMaximaNacimiento()" required placeholder="Fecha de nacimiento">
     </label>
     
     <p>Ingrese datos de su domicilio: </p>
     
     <label for="nombre-calle">
-      <input class="controls" type="text" name="nombre-calle" id="nombre-calle" required placeholder="Calle">
+      <input class="controls" type="text" name="nombre-calle" id="nombre-calle" required placeholder="Calle" pattern="[A-Za-z\s]{1,50}">
     </label>
     
     <label for="numero-casa">
-      <input class="controls" type="number" min="1" max="100000" name="numero-casa" id="numero-casa" required placeholder="Altura">
+      <input class="controls" type="number" name="numero-casa" id="numero-casa" required placeholder="Altura" pattern="[0-9]{1,999999}">
     </label>
     
     <p>Ingrese datos de registro: </p>
     
     <label for="correo">
-      <input class="controls" type="email" name="correo" id="correo" required placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
+      <input class="controls" type="email" name="correo" id="correo" required placeholder="Email. Ej.: usuario@dominio.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
     </label>
 
     <div class="mostrar-contrasenia">
       <label for="contrasenia"></label>
-      <input class="controls" type="password" name="constraseña" id="contrasenia" required placeholder="Contraseña" pattern="(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+      <input class="controls" type="password" name="constraseña" id="contrasenia" required placeholder="Contraseña. Ej.: User123!" pattern="(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
       <span id="mostrar">Mostrar</span>
     </div>
 
-    <div>
-      <p>Seleccione un método de pago</p>
-      <select name="metodo-pago" id="metodo-pago" class="metodos-pago" required>
+    <p>Seleccione un método de pago</p>
+    <div class="metodos-pago">
+      <select name="metodo-pago" id="metodo-pago-select" required>
         <option value="cc">Tarjeta de crédito</option>
         <option value="dc">Tarjeta de débito</option>
         <option value="mp">MercadoPago</option>

@@ -28,6 +28,7 @@ function habilitarCampoPasajeVuelta() {
 function deshabilitarCampoPasajeVuelta() {
     document.getElementById("pasaje-fecha-vuelta").value = "";
     var checkFecha = document.getElementById("pasaje-fecha-vuelta");
+    checkFecha.value = "";
     checkFecha.disabled = true;
     checkFecha.style.backgroundColor = "rgb(171, 171, 171)";
 }
@@ -38,9 +39,15 @@ function habilitarCampoPaqueteVuelta() {
     checkFecha.style.backgroundColor = "rgb(255, 255, 255)";
 }
 
+<<<<<<< HEAD
 function deshabilitarCampoPaqueteVuelta() {
     document.getElementById("paquete-fecha-vuelta").value = "";
     var checkFecha = document.getElementById("paquete-fecha-vuelta");
+=======
+function deshabilitarCampoPaqueteVuelta(){
+    var checkFecha = document.getElementById("paquete-vuelta");
+    checkFecha.value = "";
+>>>>>>> cc3c64975b6258802e80f4c5efb4b7c0168a83bb
     checkFecha.disabled = true;
     checkFecha.style.backgroundColor = "rgb(171, 171, 171)";
 }
@@ -211,4 +218,53 @@ function habilitarFiltroExcursiones() {
     document.getElementById("filtro-pasajes").style.display = "none";
     document.getElementById("filtro-paquetes").style.display = "none";
     document.getElementById("filtro-excursiones").style.display = "";
+}
+
+function rangoFecha() {
+    fechaActual();
+    fechaMaxima();
+}
+
+function fechaActual() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+
+    today = yyyy + '-' + mm + '-' + dd;
+
+    var fecha_ida = document.getElementById('pasaje-fecha-ida');
+    var fecha_vuelta = document.getElementById('pasaje-fecha-vuelta');
+    fecha_ida.min = today;
+    fecha_vuelta.min = today;
+}
+
+function fechaMaxima() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+
+    today = (yyyy + 1) + '-' + mm + '-' + dd;
+
+    var fecha_ida = document.getElementById('pasaje-fecha-ida');
+    var fecha_vuelta = document.getElementById('pasaje-fecha-vuelta');
+    fecha_ida.max = today;
+    fecha_vuelta.max = today;
 }
