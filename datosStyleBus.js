@@ -74,7 +74,7 @@ let pasajesIdaVuelta = [
         'origen': 'Buenos Aires',
         'destino': 'Chubut',
         'fechaIda': '2023-04-15',
-        'fechaVuelta': '2022-05-15',
+        'fechaVuelta': '2023-05-15',
         'cantidadPasajeros': 1
     },
     {

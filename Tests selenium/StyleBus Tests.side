@@ -1,0 +1,1301 @@
+{
+  "id": "0433b121-8a81-40bf-aad9-64d70e054729",
+  "version": "2.0",
+  "name": "StyleBus Tests",
+  "url": "https://marianochun.gitlab.io/prototipo-web-stylebus/",
+  "tests": [{
+    "id": "15e36250-1096-4fe2-a7ea-90cffcf447be",
+    "name": "Búsqueda pasaje ida-vuelta",
+    "commands": [{
+      "id": "171aab35-09bb-40e0-add7-75310a36110d",
+      "comment": "",
+      "command": "open",
+      "target": "/prototipo-web-stylebus/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e904430-38b8-42e5-8ade-cc37bc87659c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1047",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2aef5983-9a89-49b8-9c2b-87e364df7f55",
+      "comment": "",
+      "command": "click",
+      "target": "id=pasaje-origen",
+      "targets": [
+        ["id=pasaje-origen", "id"],
+        ["css=#pasaje-origen", "css:finder"],
+        ["xpath=//input[@id='pasaje-origen']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ecb0b06-cf8e-459a-a86a-3399e0231c48",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-origen",
+      "targets": [
+        ["id=pasaje-origen", "id"],
+        ["css=#pasaje-origen", "css:finder"],
+        ["xpath=//input[@id='pasaje-origen']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div/label/input", "xpath:position"]
+      ],
+      "value": "buenos aires"
+    }, {
+      "id": "28ed1cd0-5a12-4461-9466-aefabce1fe9d",
+      "comment": "",
+      "command": "click",
+      "target": "id=pasaje-destino",
+      "targets": [
+        ["id=pasaje-destino", "id"],
+        ["css=#pasaje-destino", "css:finder"],
+        ["xpath=//input[@id='pasaje-destino']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//div/label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b735bdd2-6715-43b8-bcc4-037be611ea03",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-destino",
+      "targets": [
+        ["id=pasaje-destino", "id"],
+        ["css=#pasaje-destino", "css:finder"],
+        ["xpath=//input[@id='pasaje-destino']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//div/label[2]/input", "xpath:position"]
+      ],
+      "value": "neuquen"
+    }, {
+      "id": "195d990b-ebd3-48cc-ad0b-4829611a5b27",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-ida",
+      "targets": [
+        ["id=pasaje-fecha-ida", "id"],
+        ["css=#pasaje-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0002-12-24"
+    }, {
+      "id": "28c6857f-0106-4a20-b83b-b171b7e85900",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-ida",
+      "targets": [
+        ["id=pasaje-fecha-ida", "id"],
+        ["css=#pasaje-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0020-12-24"
+    }, {
+      "id": "7e7aad3a-ae7e-4e9a-8711-db1ec9080e08",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-ida",
+      "targets": [
+        ["id=pasaje-fecha-ida", "id"],
+        ["css=#pasaje-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0202-12-24"
+    }, {
+      "id": "c96d8579-86de-4990-b19f-12e262660892",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-ida",
+      "targets": [
+        ["id=pasaje-fecha-ida", "id"],
+        ["css=#pasaje-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "2022-12-24"
+    }, {
+      "id": "381c9ba8-46a7-408f-b083-b3db2b70d14b",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-vuelta",
+      "targets": [
+        ["id=pasaje-fecha-vuelta", "id"],
+        ["css=#pasaje-fecha-vuelta", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-vuelta']", "xpath:attributes"],
+        ["xpath=//div[@id='div-campo-pasaje-vuelta']/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/label/input", "xpath:position"]
+      ],
+      "value": "0002-01-13"
+    }, {
+      "id": "2639189d-283d-4304-b10a-4dbfa770e8ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-vuelta",
+      "targets": [
+        ["id=pasaje-fecha-vuelta", "id"],
+        ["css=#pasaje-fecha-vuelta", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-vuelta']", "xpath:attributes"],
+        ["xpath=//div[@id='div-campo-pasaje-vuelta']/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/label/input", "xpath:position"]
+      ],
+      "value": "0020-01-13"
+    }, {
+      "id": "e4eac64e-a3ff-45bb-bb04-90684ecd9e31",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-vuelta",
+      "targets": [
+        ["id=pasaje-fecha-vuelta", "id"],
+        ["css=#pasaje-fecha-vuelta", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-vuelta']", "xpath:attributes"],
+        ["xpath=//div[@id='div-campo-pasaje-vuelta']/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/label/input", "xpath:position"]
+      ],
+      "value": "0202-01-13"
+    }, {
+      "id": "4c6abbea-a685-416b-a4e7-a084b0f122a8",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-vuelta",
+      "targets": [
+        ["id=pasaje-fecha-vuelta", "id"],
+        ["css=#pasaje-fecha-vuelta", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-vuelta']", "xpath:attributes"],
+        ["xpath=//div[@id='div-campo-pasaje-vuelta']/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/label/input", "xpath:position"]
+      ],
+      "value": "2023-01-13"
+    }, {
+      "id": "83a38dbc-4e48-490a-8f38-ef281341f13e",
+      "comment": "",
+      "command": "click",
+      "target": "id=pasaje-cantidad-pasajeros",
+      "targets": [
+        ["id=pasaje-cantidad-pasajeros", "id"],
+        ["css=#pasaje-cantidad-pasajeros", "css:finder"],
+        ["xpath=//input[@id='pasaje-cantidad-pasajeros']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9709995-d9b3-4f5b-8655-9559ced2e4d7",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-cantidad-pasajeros",
+      "targets": [
+        ["id=pasaje-cantidad-pasajeros", "id"],
+        ["css=#pasaje-cantidad-pasajeros", "css:finder"],
+        ["xpath=//input[@id='pasaje-cantidad-pasajeros']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "fe3375c7-5e95-4203-8ec5-41c092463fe6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#filtro-pasajes > .btn-buscar",
+      "targets": [
+        ["css=#filtro-pasajes > .btn-buscar", "css:finder"],
+        ["xpath=//input[@value='🔍︎ Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0bd39772-2419-4b74-990b-e7b787bbe34a",
+    "name": "Búsqueda excursión 1",
+    "commands": [{
+      "id": "ae0f5417-2ed1-42dd-aafb-7800bf5ad81e",
+      "comment": "",
+      "command": "open",
+      "target": "https://marianochun.gitlab.io/prototipo-web-stylebus/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8afcee94-1782-4b96-b44d-83155b8b9bdb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1047",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "919a8cb1-271f-439a-b2d6-de29bcea46e5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Excursiones",
+      "targets": [
+        ["linkText=Excursiones", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Excursiones')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#excursiones')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Excursiones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "74c16474-4454-48b7-9e2d-8ea8758ea54a",
+      "comment": "",
+      "command": "click",
+      "target": "id=ubicacion-excursion",
+      "targets": [
+        ["id=ubicacion-excursion", "id"],
+        ["css=#ubicacion-excursion", "css:finder"],
+        ["xpath=//input[@id='ubicacion-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8cc6eab-5b1f-4b16-a37f-da8c3a5823c7",
+      "comment": "",
+      "command": "type",
+      "target": "id=ubicacion-excursion",
+      "targets": [
+        ["id=ubicacion-excursion", "id"],
+        ["css=#ubicacion-excursion", "css:finder"],
+        ["xpath=//input[@id='ubicacion-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/label/input", "xpath:position"]
+      ],
+      "value": "Misiones"
+    }, {
+      "id": "4b90d872-32fa-4a5b-a143-d554cf68a84f",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0002-02-11"
+    }, {
+      "id": "3af8f1c3-dc66-4651-85b7-29b88bd9a1c6",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0020-02-11"
+    }, {
+      "id": "40fd1c92-d449-4475-862a-ee98fcb3af77",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0202-02-11"
+    }, {
+      "id": "68294b52-00ba-43ca-b274-df263244559b",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "2023-02-11"
+    }, {
+      "id": "532c3e8c-6d8f-4eaf-b96c-e250dd1558a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3503c45d-2edf-4140-9e15-24bba799aab7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08a57d17-129e-47c8-b608-f3c3eb84309a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c9936f3c-1337-4446-bb54-6fa14c1ea31d",
+    "name": "Búsqueda excursión 2",
+    "commands": [{
+      "id": "2b46ff88-930b-4c5a-9c6c-22d74a3f0b2e",
+      "comment": "",
+      "command": "open",
+      "target": "https://marianochun.gitlab.io/prototipo-web-stylebus/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5bf311d-768d-4538-aa85-375758831d0f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "004bde8d-8003-4fe6-bc59-de6f0ade58b1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Excursiones",
+      "targets": [
+        ["linkText=Excursiones", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Excursiones')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#excursiones')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Excursiones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c1d53c0-40ad-4483-ad82-def4607709ca",
+      "comment": "",
+      "command": "click",
+      "target": "id=ubicacion-excursion",
+      "targets": [
+        ["id=ubicacion-excursion", "id"],
+        ["css=#ubicacion-excursion", "css:finder"],
+        ["xpath=//input[@id='ubicacion-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f21bf76-22cf-479a-92c2-e163f04667c4",
+      "comment": "",
+      "command": "type",
+      "target": "id=ubicacion-excursion",
+      "targets": [
+        ["id=ubicacion-excursion", "id"],
+        ["css=#ubicacion-excursion", "css:finder"],
+        ["xpath=//input[@id='ubicacion-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/label/input", "xpath:position"]
+      ],
+      "value": "tierra del Fuego"
+    }, {
+      "id": "d8ddb607-3fee-447b-93b6-bff59a3d8656",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0002-11-28"
+    }, {
+      "id": "1d316eb7-b3c4-4322-a320-82b915ad8546",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0020-11-28"
+    }, {
+      "id": "608039dd-a99f-4e50-a406-f45dc49ec6fe",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0202-11-28"
+    }, {
+      "id": "88705ae0-3693-4855-81e7-b75928661d61",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "2022-11-28"
+    }, {
+      "id": "5bf8f599-ffc4-4920-8305-42e7c4a79c34",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39d1932e-a20c-4194-9efe-be5f94e21743",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57d2ab7b-37b1-4edf-8e7d-3fbfff6c5052",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "09f6fdba-e95e-4a85-9bd9-79cd521043e3",
+    "name": "Búsqueda excursión 3",
+    "commands": [{
+      "id": "233069f1-8e9d-42cf-9cb6-6d37aaf0e55c",
+      "comment": "",
+      "command": "open",
+      "target": "https://marianochun.gitlab.io/prototipo-web-stylebus/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f99e9ab6-af94-4426-87f0-b79c1c736ef1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0533a04-bd69-4327-83aa-b88ecbd4fbbd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Excursiones",
+      "targets": [
+        ["linkText=Excursiones", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Excursiones')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#excursiones')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Excursiones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab5ddc3b-f783-4e95-843e-341602f5b52e",
+      "comment": "",
+      "command": "click",
+      "target": "id=ubicacion-excursion",
+      "targets": [
+        ["id=ubicacion-excursion", "id"],
+        ["css=#ubicacion-excursion", "css:finder"],
+        ["xpath=//input[@id='ubicacion-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "93847628-5f82-4c09-b2a0-249b2fca6f3c",
+      "comment": "",
+      "command": "type",
+      "target": "id=ubicacion-excursion",
+      "targets": [
+        ["id=ubicacion-excursion", "id"],
+        ["css=#ubicacion-excursion", "css:finder"],
+        ["xpath=//input[@id='ubicacion-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/label/input", "xpath:position"]
+      ],
+      "value": "MENDOZA"
+    }, {
+      "id": "4113cc0b-3f75-4a9f-b0ce-5e1cc45b849f",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0002-06-25"
+    }, {
+      "id": "e5227c49-c4b0-48df-8205-bad8e4619f92",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0020-06-25"
+    }, {
+      "id": "b44951c7-4bcd-402a-a196-86186055bb0e",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0202-06-25"
+    }, {
+      "id": "79b75a49-7f54-4861-8a16-60f73b9c6dd7",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "2023-06-25"
+    }, {
+      "id": "6700c1a1-c34e-428b-b3a5-5a22888713b8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa8a32b8-1039-4e3c-9e4c-f15ae8cf7923",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fded8660-9ff5-49cd-9541-ca83817214a1",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1ac7a2d2-e169-4298-8f47-bc0c9be9b69e",
+    "name": "Búsqueda pasaje ida",
+    "commands": [{
+      "id": "85b4a414-3a75-4a5c-abb6-77c6c279ee4d",
+      "comment": "",
+      "command": "open",
+      "target": "https://marianochun.gitlab.io/prototipo-web-stylebus/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f83cfc3e-bee8-4f9c-ab56-585cdb90c31c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c39dd837-1f7c-4412-b393-0044f4b7c33b",
+      "comment": "",
+      "command": "click",
+      "target": "id=radio-pasaje-ida",
+      "targets": [
+        ["id=radio-pasaje-ida", "id"],
+        ["css=#radio-pasaje-ida", "css:finder"],
+        ["xpath=//input[@id='radio-pasaje-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/fieldset/form/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b29978d3-f56c-407c-bf39-3cc2ce386171",
+      "comment": "",
+      "command": "click",
+      "target": "id=pasaje-origen",
+      "targets": [
+        ["id=pasaje-origen", "id"],
+        ["css=#pasaje-origen", "css:finder"],
+        ["xpath=//input[@id='pasaje-origen']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b626ed60-7a4a-4e8c-9ca5-d7535b424b71",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-origen",
+      "targets": [
+        ["id=pasaje-origen", "id"],
+        ["css=#pasaje-origen", "css:finder"],
+        ["xpath=//input[@id='pasaje-origen']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div/label/input", "xpath:position"]
+      ],
+      "value": "BUENOS AIRES"
+    }, {
+      "id": "9e611c43-85be-4379-927e-ad5ce689e7b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=pasaje-destino",
+      "targets": [
+        ["id=pasaje-destino", "id"],
+        ["css=#pasaje-destino", "css:finder"],
+        ["xpath=//input[@id='pasaje-destino']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//div/label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdaa7146-9ac7-44f0-a1b6-c9d21aa1c33d",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-destino",
+      "targets": [
+        ["id=pasaje-destino", "id"],
+        ["css=#pasaje-destino", "css:finder"],
+        ["xpath=//input[@id='pasaje-destino']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//div/label[2]/input", "xpath:position"]
+      ],
+      "value": "LA pampa"
+    }, {
+      "id": "3d234d7d-153c-4f79-b494-72608b4497d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-ida",
+      "targets": [
+        ["id=pasaje-fecha-ida", "id"],
+        ["css=#pasaje-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0002-12-15"
+    }, {
+      "id": "7146e1f8-2cfd-4f51-9358-90f7472e9936",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-ida",
+      "targets": [
+        ["id=pasaje-fecha-ida", "id"],
+        ["css=#pasaje-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0020-12-15"
+    }, {
+      "id": "ad84eb75-7bf3-4ca9-8c1f-c35de1b0d67a",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-ida",
+      "targets": [
+        ["id=pasaje-fecha-ida", "id"],
+        ["css=#pasaje-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "0202-12-15"
+    }, {
+      "id": "ab43273a-12a3-486c-a295-c1d172fb121c",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-fecha-ida",
+      "targets": [
+        ["id=pasaje-fecha-ida", "id"],
+        ["css=#pasaje-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='pasaje-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/input", "xpath:position"]
+      ],
+      "value": "2022-12-15"
+    }, {
+      "id": "3819d1f9-37f3-4c89-98fc-994d1574e3e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=pasaje-cantidad-pasajeros",
+      "targets": [
+        ["id=pasaje-cantidad-pasajeros", "id"],
+        ["css=#pasaje-cantidad-pasajeros", "css:finder"],
+        ["xpath=//input[@id='pasaje-cantidad-pasajeros']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "969d2ae5-c041-49d1-93bb-966d441aaffa",
+      "comment": "",
+      "command": "type",
+      "target": "id=pasaje-cantidad-pasajeros",
+      "targets": [
+        ["id=pasaje-cantidad-pasajeros", "id"],
+        ["css=#pasaje-cantidad-pasajeros", "css:finder"],
+        ["xpath=//input[@id='pasaje-cantidad-pasajeros']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "c2935251-ea31-4c80-9ce7-29120d691a9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=#filtro-pasajes > .btn-buscar",
+      "targets": [
+        ["css=#filtro-pasajes > .btn-buscar", "css:finder"],
+        ["xpath=//input[@value='🔍︎ Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-pasajes']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e5107612-8594-45f6-a6df-7827abe9ab2f",
+    "name": "Búsqueda paquete ida-vuelta",
+    "commands": [{
+      "id": "87246ddf-6666-4a83-98b7-bc9ad13019a8",
+      "comment": "",
+      "command": "open",
+      "target": "https://marianochun.gitlab.io/prototipo-web-stylebus/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "696dfd33-1b9c-4b3d-844f-9a64a1fe7995",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a657816-31ed-43d1-a88e-08d86bf2f509",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Paquetes",
+      "targets": [
+        ["linkText=Paquetes", "linkText"],
+        ["css=.nav-principal li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Paquetes')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#paquetes')]", "xpath:href"],
+        ["xpath=//div[2]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Paquetes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a66d50cd-d999-44a6-bbe7-e3ca790d539c",
+      "comment": "",
+      "command": "click",
+      "target": "id=paquete-origen",
+      "targets": [
+        ["id=paquete-origen", "id"],
+        ["css=#paquete-origen", "css:finder"],
+        ["xpath=//input[@id='paquete-origen']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08a7c9f6-9a79-4ded-9462-9ecd0977d722",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-origen",
+      "targets": [
+        ["id=paquete-origen", "id"],
+        ["css=#paquete-origen", "css:finder"],
+        ["xpath=//input[@id='paquete-origen']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label/input", "xpath:position"]
+      ],
+      "value": "buenos aires"
+    }, {
+      "id": "b0627f9e-80be-498f-b7e2-28b341c8bbc8",
+      "comment": "",
+      "command": "click",
+      "target": "id=paquete-destino",
+      "targets": [
+        ["id=paquete-destino", "id"],
+        ["css=#paquete-destino", "css:finder"],
+        ["xpath=//input[@id='paquete-destino']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48babc72-f3bc-4428-a365-8116d8a7c18a",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-destino",
+      "targets": [
+        ["id=paquete-destino", "id"],
+        ["css=#paquete-destino", "css:finder"],
+        ["xpath=//input[@id='paquete-destino']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label[2]/input", "xpath:position"]
+      ],
+      "value": "catamarca"
+    }, {
+      "id": "5fda3760-d771-490e-b0b3-c1bb7be67e57",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-ida",
+      "targets": [
+        ["id=paquete-fecha-ida", "id"],
+        ["css=#paquete-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "0002-03-16"
+    }, {
+      "id": "86ee958d-61b6-4bae-91d6-dc490c16ca4f",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-ida",
+      "targets": [
+        ["id=paquete-fecha-ida", "id"],
+        ["css=#paquete-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "0020-03-16"
+    }, {
+      "id": "d75488e3-722e-45bc-b1f3-b788fc89b920",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-ida",
+      "targets": [
+        ["id=paquete-fecha-ida", "id"],
+        ["css=#paquete-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "0202-03-16"
+    }, {
+      "id": "b2dd9029-59db-44a4-ada5-0de5b2fe9959",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-ida",
+      "targets": [
+        ["id=paquete-fecha-ida", "id"],
+        ["css=#paquete-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "2023-03-16"
+    }, {
+      "id": "d3844bf4-cb66-4ac4-9993-c6c0a609f36d",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-vuelta",
+      "targets": [
+        ["id=paquete-fecha-vuelta", "id"],
+        ["css=#paquete-fecha-vuelta", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-vuelta']", "xpath:attributes"],
+        ["xpath=//div[@id='div-campo-paquete-vuelta']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "0002-04-01"
+    }, {
+      "id": "cb829408-0c27-43cb-be78-c6c43c4cf08d",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-vuelta",
+      "targets": [
+        ["id=paquete-fecha-vuelta", "id"],
+        ["css=#paquete-fecha-vuelta", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-vuelta']", "xpath:attributes"],
+        ["xpath=//div[@id='div-campo-paquete-vuelta']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "0020-04-01"
+    }, {
+      "id": "51d3c15a-dd83-461a-9a01-ad304453541e",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-vuelta",
+      "targets": [
+        ["id=paquete-fecha-vuelta", "id"],
+        ["css=#paquete-fecha-vuelta", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-vuelta']", "xpath:attributes"],
+        ["xpath=//div[@id='div-campo-paquete-vuelta']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "0202-04-01"
+    }, {
+      "id": "04d6387c-ed88-4b93-9ccd-7a24fe65cf82",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-vuelta",
+      "targets": [
+        ["id=paquete-fecha-vuelta", "id"],
+        ["css=#paquete-fecha-vuelta", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-vuelta']", "xpath:attributes"],
+        ["xpath=//div[@id='div-campo-paquete-vuelta']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "2023-04-01"
+    }, {
+      "id": "b62d505d-b7a6-49f3-acdd-6fb5c86ddbcf",
+      "comment": "",
+      "command": "click",
+      "target": "css=#filtro-paquetes > .btn-buscar",
+      "targets": [
+        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28999ddf-7a86-42b0-abed-0e343d94ff1b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#filtro-paquetes > .btn-buscar",
+      "targets": [
+        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87a1ec62-9df9-40f9-b3de-376b565dd3c8",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#filtro-paquetes > .btn-buscar",
+      "targets": [
+        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "388af221-3f88-4abf-853f-b175feb85a7d",
+      "comment": "",
+      "command": "click",
+      "target": "id=paquete-cantidad-excursiones",
+      "targets": [
+        ["id=paquete-cantidad-excursiones", "id"],
+        ["css=#paquete-cantidad-excursiones", "css:finder"],
+        ["xpath=//input[@id='paquete-cantidad-excursiones']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "964c9ebe-6ed9-48b5-aff3-39f234a68942",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-cantidad-excursiones",
+      "targets": [
+        ["id=paquete-cantidad-excursiones", "id"],
+        ["css=#paquete-cantidad-excursiones", "css:finder"],
+        ["xpath=//input[@id='paquete-cantidad-excursiones']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/label/input", "xpath:position"]
+      ],
+      "value": "2"
+    }]
+  }, {
+    "id": "d44d2caf-7faa-4aac-8c1a-c9023fb4d8f1",
+    "name": "Búsqueda paquete ida",
+    "commands": [{
+      "id": "05d38884-d455-471d-bfa5-155388c3daa7",
+      "comment": "",
+      "command": "open",
+      "target": "https://marianochun.gitlab.io/prototipo-web-stylebus/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eee7d4bd-1974-4f92-ad21-77f5ee6b982d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11c4c79a-ef3a-4da9-a5f8-73b62b87cae2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Paquetes",
+      "targets": [
+        ["linkText=Paquetes", "linkText"],
+        ["css=.nav-principal li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Paquetes')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#paquetes')]", "xpath:href"],
+        ["xpath=//div[2]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Paquetes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86cf0939-ea7d-4de4-be8f-47b0f67807bd",
+      "comment": "",
+      "command": "click",
+      "target": "id=radio-paquete-ida",
+      "targets": [
+        ["id=radio-paquete-ida", "id"],
+        ["css=#radio-paquete-ida", "css:finder"],
+        ["xpath=//input[@id='radio-paquete-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/fieldset/form/label[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/fieldset/form/label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67a32f18-ad5a-44ec-b563-bc8f22b42a3e",
+      "comment": "",
+      "command": "click",
+      "target": "id=paquete-origen",
+      "targets": [
+        ["id=paquete-origen", "id"],
+        ["css=#paquete-origen", "css:finder"],
+        ["xpath=//input[@id='paquete-origen']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb7ec2fa-d10d-4455-8756-0abe1c8fb921",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-origen",
+      "targets": [
+        ["id=paquete-origen", "id"],
+        ["css=#paquete-origen", "css:finder"],
+        ["xpath=//input[@id='paquete-origen']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label/input", "xpath:position"]
+      ],
+      "value": "tierra del fuego"
+    }, {
+      "id": "6f8a8d6b-e0e2-48a7-bffa-1c7d138c2750",
+      "comment": "",
+      "command": "click",
+      "target": "id=paquete-destino",
+      "targets": [
+        ["id=paquete-destino", "id"],
+        ["css=#paquete-destino", "css:finder"],
+        ["xpath=//input[@id='paquete-destino']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2196c8e5-5d37-4314-bf70-c318e4168c82",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-destino",
+      "targets": [
+        ["id=paquete-destino", "id"],
+        ["css=#paquete-destino", "css:finder"],
+        ["xpath=//input[@id='paquete-destino']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div/label[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label[2]/input", "xpath:position"]
+      ],
+      "value": "neuquen"
+    }, {
+      "id": "6056959d-8d6e-4721-b17f-674996464d94",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-ida",
+      "targets": [
+        ["id=paquete-fecha-ida", "id"],
+        ["css=#paquete-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "0002-10-18"
+    }, {
+      "id": "101f509d-a069-47a1-b51f-02a38d5d6b74",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-ida",
+      "targets": [
+        ["id=paquete-fecha-ida", "id"],
+        ["css=#paquete-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "0020-10-18"
+    }, {
+      "id": "29af621c-92d4-4d5f-adea-9d945342424e",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-ida",
+      "targets": [
+        ["id=paquete-fecha-ida", "id"],
+        ["css=#paquete-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "0202-10-18"
+    }, {
+      "id": "fe62311f-e2c8-4796-820a-4ab93896797d",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-fecha-ida",
+      "targets": [
+        ["id=paquete-fecha-ida", "id"],
+        ["css=#paquete-fecha-ida", "css:finder"],
+        ["xpath=//input[@id='paquete-fecha-ida']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "2023-10-18"
+    }, {
+      "id": "9fa7f886-7dfa-4055-b41c-c75eb66946b1",
+      "comment": "",
+      "command": "click",
+      "target": "id=paquete-cantidad-excursiones",
+      "targets": [
+        ["id=paquete-cantidad-excursiones", "id"],
+        ["css=#paquete-cantidad-excursiones", "css:finder"],
+        ["xpath=//input[@id='paquete-cantidad-excursiones']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d807b339-717a-487e-b248-92bf279c75b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=paquete-cantidad-excursiones",
+      "targets": [
+        ["id=paquete-cantidad-excursiones", "id"],
+        ["css=#paquete-cantidad-excursiones", "css:finder"],
+        ["xpath=//input[@id='paquete-cantidad-excursiones']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/div/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/label/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "2d74fe27-4f69-4bb3-a6dd-c797abd57fc3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#filtro-paquetes > .btn-buscar",
+      "targets": [
+        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abe6ef36-1b56-4408-a82c-f6ad3d66319e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#filtro-paquetes > .btn-buscar",
+      "targets": [
+        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6d83ee7-a064-41a7-90f4-54b5f3894da2",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#filtro-paquetes > .btn-buscar",
+      "targets": [
+        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0cdaed60-30c6-4471-94aa-ffb0f2200990",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["15e36250-1096-4fe2-a7ea-90cffcf447be"]
+  }],
+  "urls": ["https://marianochun.gitlab.io/", "https://marianochun.gitlab.io/prototipo-web-stylebus/"],
+  "plugins": []
+}
