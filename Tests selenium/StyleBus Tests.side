@@ -1014,42 +1014,6 @@
       ],
       "value": "2023-04-01"
     }, {
-      "id": "b62d505d-b7a6-49f3-acdd-6fb5c86ddbcf",
-      "comment": "",
-      "command": "click",
-      "target": "css=#filtro-paquetes > .btn-buscar",
-      "targets": [
-        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
-        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
-        ["xpath=//main/div/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "28999ddf-7a86-42b0-abed-0e343d94ff1b",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=#filtro-paquetes > .btn-buscar",
-      "targets": [
-        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
-        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
-        ["xpath=//main/div/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "87a1ec62-9df9-40f9-b3de-376b565dd3c8",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=#filtro-paquetes > .btn-buscar",
-      "targets": [
-        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
-        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
-        ["xpath=//main/div/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "388af221-3f88-4abf-853f-b175feb85a7d",
       "comment": "",
       "command": "click",
@@ -1075,6 +1039,42 @@
         ["xpath=//div[2]/div/div[3]/label/input", "xpath:position"]
       ],
       "value": "2"
+    }, {
+      "id": "28999ddf-7a86-42b0-abed-0e343d94ff1b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#filtro-paquetes > .btn-buscar",
+      "targets": [
+        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53577cd5-f8e7-4422-8f25-399dc6956724",
+      "comment": "",
+      "command": "click",
+      "target": "css=#filtro-paquetes > .btn-buscar",
+      "targets": [
+        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87a1ec62-9df9-40f9-b3de-376b565dd3c8",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#filtro-paquetes > .btn-buscar",
+      "targets": [
+        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
     }]
   }, {
     "id": "d44d2caf-7faa-4aac-8c1a-c9023fb4d8f1",
