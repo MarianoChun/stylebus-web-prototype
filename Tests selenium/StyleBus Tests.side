@@ -214,6 +214,17 @@
         ["xpath=//div/input", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "eca5fc7f-9690-4309-b1e4-06673dc32db4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#lista-excursiones li",
+      "targets": [
+        ["css=#lista-excursiones li", "css:finder"],
+        ["xpath=//div[@id='lista-excursiones']/ul/li", "xpath:idRelative"],
+        ["xpath=//div[4]/ul/li", "xpath:position"]
+      ],
+      "value": "Origen: Buenos Aires\\nDestino: Neuquen\\nFecha ida: 2022-12-24\\nFecha vuelta: 2023-01-13\\nCantidad de pasajeros: 2\\nAgregar a carrito"
     }]
   }, {
     "id": "0bd39772-2419-4b74-990b-e7b787bbe34a",
@@ -360,6 +371,28 @@
         ["xpath=//div[3]/input", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "441b9091-3b3a-4754-ba8d-e8aaf118a819",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#lista-excursiones li:nth-child(1)",
+      "targets": [
+        ["css=#lista-excursiones li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='lista-excursiones']/ul/li", "xpath:idRelative"],
+        ["xpath=//div[4]/ul/li", "xpath:position"]
+      ],
+      "value": "Ubicación: Misiones\\nDescripción: Excursion a la selva misionera\\nFecha: 2023-02-11\\nAgregar a carrito"
+    }, {
+      "id": "a7c38dea-6dbf-4ebc-9000-0f707b03ca0e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#lista-excursiones li:nth-child(2)",
+      "targets": [
+        ["css=#lista-excursiones li:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='lista-excursiones']/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/ul/li[2]", "xpath:position"]
+      ],
+      "value": "Ubicación: Misiones\\nDescripción: Recorrido por el Parque Nacional Iguazu\\nFecha: 2023-02-11\\nAgregar a carrito"
     }]
   }, {
     "id": "c9936f3c-1337-4446-bb54-6fa14c1ea31d",
@@ -506,6 +539,17 @@
         ["xpath=//div[3]/input", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "bdff3e42-5b5f-4a78-82af-cc574c74bf58",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#lista-excursiones li",
+      "targets": [
+        ["css=#lista-excursiones li", "css:finder"],
+        ["xpath=//div[@id='lista-excursiones']/ul/li", "xpath:idRelative"],
+        ["xpath=//div[4]/ul/li", "xpath:position"]
+      ],
+      "value": "Ubicación: Tierra del fuego\\nDescripción: Excursion a Parque Nacional Tierra del Fuego\\nFecha: 2022-11-28\\nAgregar a carrito"
     }]
   }, {
     "id": "09f6fdba-e95e-4a85-9bd9-79cd521043e3",
@@ -617,7 +661,7 @@
       ],
       "value": "2023-06-25"
     }, {
-      "id": "6700c1a1-c34e-428b-b3a5-5a22888713b8",
+      "id": "d8e6b530-614d-4b2d-90c4-b43983ef02b3",
       "comment": "",
       "command": "click",
       "target": "css=.btn-buscar:nth-child(3)",
@@ -629,29 +673,16 @@
       ],
       "value": ""
     }, {
-      "id": "aa8a32b8-1039-4e3c-9e4c-f15ae8cf7923",
+      "id": "1d403adf-78ca-4425-b216-0c704bed77bb",
       "comment": "",
-      "command": "mouseOver",
-      "target": "css=.btn-buscar:nth-child(3)",
+      "command": "assertText",
+      "target": "css=#lista-excursiones li",
       "targets": [
-        ["css=.btn-buscar:nth-child(3)", "css:finder"],
-        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
-        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
-        ["xpath=//div[3]/input", "xpath:position"]
+        ["css=#lista-excursiones li", "css:finder"],
+        ["xpath=//div[@id='lista-excursiones']/ul/li", "xpath:idRelative"],
+        ["xpath=//div[4]/ul/li", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "fded8660-9ff5-49cd-9541-ca83817214a1",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.btn-buscar:nth-child(3)",
-      "targets": [
-        ["css=.btn-buscar:nth-child(3)", "css:finder"],
-        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
-        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
-        ["xpath=//div[3]/input", "xpath:position"]
-      ],
-      "value": ""
+      "value": "Ubicación: Mendoza\\nDescripción: Recorrido a viñedos mendocinos\\nFecha: 2023-06-25\\nAgregar a carrito"
     }]
   }, {
     "id": "1ac7a2d2-e169-4298-8f47-bc0c9be9b69e",
@@ -825,6 +856,17 @@
         ["xpath=//div/input", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "3d62a5a5-6425-489e-893e-dbc07a8e6046",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#lista-excursiones li",
+      "targets": [
+        ["css=#lista-excursiones li", "css:finder"],
+        ["xpath=//div[@id='lista-excursiones']/ul/li", "xpath:idRelative"],
+        ["xpath=//div[4]/ul/li", "xpath:position"]
+      ],
+      "value": "Origen: Buenos Aires\\nDestino: La Pampa\\nFecha ida: 2022-12-15\\nCantidad de pasajeros: 2\\nAgregar a carrito"
     }]
   }, {
     "id": "e5107612-8594-45f6-a6df-7827abe9ab2f",
@@ -1040,18 +1082,6 @@
       ],
       "value": "2"
     }, {
-      "id": "28999ddf-7a86-42b0-abed-0e343d94ff1b",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=#filtro-paquetes > .btn-buscar",
-      "targets": [
-        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
-        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
-        ["xpath=//main/div/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "53577cd5-f8e7-4422-8f25-399dc6956724",
       "comment": "",
       "command": "click",
@@ -1064,17 +1094,16 @@
       ],
       "value": ""
     }, {
-      "id": "87a1ec62-9df9-40f9-b3de-376b565dd3c8",
+      "id": "a9158673-0ad7-4f2a-847a-4ef81c883b4c",
       "comment": "",
-      "command": "mouseOut",
-      "target": "css=#filtro-paquetes > .btn-buscar",
+      "command": "assertText",
+      "target": "css=#lista-excursiones li",
       "targets": [
-        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
-        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
-        ["xpath=//main/div/div[2]/input", "xpath:position"]
+        ["css=#lista-excursiones li", "css:finder"],
+        ["xpath=//div[@id='lista-excursiones']/ul/li", "xpath:idRelative"],
+        ["xpath=//div[4]/ul/li", "xpath:position"]
       ],
-      "value": ""
+      "value": "Origen: Buenos Aires\\nDestino: Catamarca\\nFecha ida: 2023-03-16\\nFecha vuelta: 2023-04-01\\nExcursiones: \\n    Excursión a Circuitos Franciscanos \\n    Excursión al Salar de Antofalla \\nAgregar a carrito"
     }]
   }, {
     "id": "d44d2caf-7faa-4aac-8c1a-c9023fb4d8f1",
@@ -1263,29 +1292,16 @@
       ],
       "value": ""
     }, {
-      "id": "abe6ef36-1b56-4408-a82c-f6ad3d66319e",
+      "id": "787c2319-0520-4c64-b9c8-a5da42bd19fb",
       "comment": "",
-      "command": "mouseOver",
-      "target": "css=#filtro-paquetes > .btn-buscar",
+      "command": "assertText",
+      "target": "css=#lista-excursiones li",
       "targets": [
-        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
-        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
-        ["xpath=//main/div/div[2]/input", "xpath:position"]
+        ["css=#lista-excursiones li", "css:finder"],
+        ["xpath=//div[@id='lista-excursiones']/ul/li", "xpath:idRelative"],
+        ["xpath=//div[4]/ul/li", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "f6d83ee7-a064-41a7-90f4-54b5f3894da2",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=#filtro-paquetes > .btn-buscar",
-      "targets": [
-        ["css=#filtro-paquetes > .btn-buscar", "css:finder"],
-        ["xpath=(//input[@value='🔍︎ Buscar'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='filtro-paquetes']/input", "xpath:idRelative"],
-        ["xpath=//main/div/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
+      "value": "Origen: Tierra del fuego\\nDestino: Neuquen\\nFecha ida: 2023-10-18\\nExcursiones: \\n    Excursión a Bariloche \\n    Excursión a Villa La Angostura \\n    Excursión al Camino de los Siete Lagos \\nAgregar a carrito"
     }]
   }],
   "suites": [{
