@@ -1,29 +1,11 @@
-<<<<<<< HEAD
 pages:
   stage: deploy
   script:
   - mkdir .public
   - cp -r * .public
   - mv .public public
-=======
-image: node:4.2.2
-
-pages:
-  cache:
-    paths:
-    - node_modules/
-
-  script:
-  - npm install hexo-cli -g
-  - npm install
-  - hexo deploy
->>>>>>> 9a794e34385fb09b27f0dd2f6b4d570e96772b4f
   artifacts:
     paths:
     - public
   only:
-<<<<<<< HEAD
   - main
-=======
-    - main
->>>>>>> 9a794e34385fb09b27f0dd2f6b4d570e96772b4f
