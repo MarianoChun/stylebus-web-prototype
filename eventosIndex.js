@@ -94,10 +94,16 @@ function mostrarExcursiones(ubicacion, fecha) {
         document.getElementById('container-filtros').appendChild(divLista);
 
     } else {
-        eliminarDiv("lista-excursiones");
+        divLista.appendChild(crearEncabezadoSinCoindicenciasBusqueda());
+        document.getElementById('container-filtros').appendChild(divLista);
     }
 }
 
+function crearEncabezadoSinCoindicenciasBusqueda(){
+    let h3 = document.createElement("h3");
+    h3.textContent = 'No hay coincidencias con los filtros de su búsqueda';
+    return h3;
+}
 function mostrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajeros) {
     var divLista = crearDivListaProductos();
 
@@ -135,7 +141,8 @@ function mostrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajero
         document.getElementById('container-filtros').appendChild(divLista);
 
     } else {
-        eliminarDiv("lista-excursiones");
+        divLista.appendChild(crearEncabezadoSinCoindicenciasBusqueda());
+        document.getElementById('container-filtros').appendChild(divLista);
     }
 }
 
@@ -175,7 +182,8 @@ function mostrarPaquetes(origen, destino, fechaIda, fechaVuelta, cantidadExcursi
         document.getElementById('container-filtros').appendChild(divLista);
 
     } else {
-        eliminarDiv("lista-excursiones");
+        divLista.appendChild(crearEncabezadoSinCoindicenciasBusqueda());
+        document.getElementById('container-filtros').appendChild(divLista);
     }
 }
 
@@ -197,18 +205,21 @@ function eliminarDiv(nombreDiv) {
 }
 
 function habilitarFiltroPasajes() {
+    eliminarDiv("lista-excursiones");
     document.getElementById("filtro-pasajes").style.display = "";
     document.getElementById("filtro-paquetes").style.display = "none";
     document.getElementById("filtro-excursiones").style.display = "none";
 }
 
 function habilitarFiltroPaquetes() {
+    eliminarDiv("lista-excursiones");
     document.getElementById("filtro-pasajes").style.display = "none";
     document.getElementById("filtro-paquetes").style.display = "";
     document.getElementById("filtro-excursiones").style.display = "none";
 }
 
 function habilitarFiltroExcursiones() {
+    eliminarDiv("lista-excursiones");
     document.getElementById("filtro-pasajes").style.display = "none";
     document.getElementById("filtro-paquetes").style.display = "none";
     document.getElementById("filtro-excursiones").style.display = "";
