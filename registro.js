@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementsById("form-registro").addEventListener('submit', enviarFormularioRegistro);
+    document.getElementById("form-registro").addEventListener('submit', enviarFormularioRegistro);
 });
 
 document.getElementById("enviar-formulario").click(function(event){
