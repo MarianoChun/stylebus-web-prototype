@@ -1,6 +1,26 @@
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementsById("form-registro").addEventListener('submit', enviarFormularioRegistro);
+});
+
+document.getElementById("enviar-formulario").click(function(event){
+    enviarFormularioRegistro(event);
+});
+
 document.querySelector('.mostrar-contrasenia #mostrar').addEventListener('click', e => {
     mostrarContrasenia(e);
 });
+
+function enviarFormularioRegistro(evento){
+    evento.preventDefault(); 
+    var confirmarEnvio = confirm("¿Esta seguro?");
+
+    if(confirmarEnvio){
+        let mensaje = "¡Felicitaciones se ha registrado satisfactoriamente!";
+        alert(mensaje);
+        this.submit();
+        window.location.href = "index.html";
+    }
+}
 
 function mostrarContrasenia(e) {
     const passwordInput = document.querySelector('#contrasenia');
