@@ -2,28 +2,20 @@ function getExcursiones(){
     return excursiones;
 }
 
-function getPasajesIda(){
-    return pasajesIda;
+function getPasajes(){
+    return pasajes;
 }
 
-function getPasajesIdaVuelta(){
-    return pasajesIdaVuelta;
-}
-
-function getPaquetesIda(){
-    return paquetesIda;
-}
-
-function getPaquetesIdaVuelta(){
-    return paquetesIdaVuelta;
+function getPaquetes(){
+    return paquetes;
 }
 
 
 function filtrarExcursionesPorUbicacionYFecha(ubicacion, fecha){
     let excursiones = [];
 
-    for(let excursion of getExcursiones()) {
-        if(excursion.ubicacion.toLowerCase() === ubicacion.toLowerCase() || excursion.fecha === fecha) {      
+    for(let excursion of getExcursiones()) { 
+        if(excursion.ubicacion.toLowerCase() === ubicacion.toLowerCase() || excursion.fecha === fecha) {    
             excursiones.push(excursion);
         }
     }
@@ -36,11 +28,10 @@ y que a la hora filtrar la cantidad de pasajeros no supere la cantidad de pasaje
 si los supera y/o no existe la busqueda estaria bueno mostrar un mensajito diciendo que no hay coincidencias*/
 
 function filtrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajeros){
-    let pasajes = [];
+    let pasajes = getPasajes();
     let pasajesFiltrados = [];
     if(fechaVuelta == ''){
         console.log("fecha vuelta vacia");
-        pasajes = getPasajesIda();
 
         for(let pasaje of pasajes) {
             if(pasaje.origen.toLowerCase() === origen.toLowerCase()
@@ -53,7 +44,6 @@ function filtrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajero
             }
         }
     } else {
-        pasajes = getPasajesIdaVuelta();
         console.log("fecha vuelta no vacia");
         for(let pasaje of pasajes) {
             if(pasaje.origen.toLowerCase() === origen.toLowerCase()
@@ -77,13 +67,15 @@ function getCantidadExcursiones(excursiones){
 }
 
 function filtrarPaquetes(origen, destino, fechaIda, fechaVuelta, cantidadExcursiones){
-    let paquetes = [];
+    let paquetes = getPaquetes();
     let paquetesFiltrados = [];
 
     if(fechaVuelta == ''){
-        paquetes = getPaquetesIda();
-
+        console.log(paquetes);
         for(let paquete of paquetes) {
+            console.log(paquete['excursiones']);
+            console.log(cantidadExcursiones);
+            console.log(getCantidadExcursiones(paquete['excursiones']) + " " + parseInt(cantidadExcursiones));
             if(paquete.origen.toLowerCase() === origen.toLowerCase()
             && paquete.destino.toLowerCase() === destino.toLowerCase()
             && paquete.fechaIda === fechaIda
@@ -92,7 +84,6 @@ function filtrarPaquetes(origen, destino, fechaIda, fechaVuelta, cantidadExcursi
             }
         }
     } else {
-        paquetes = getPaquetesIdaVuelta();
         for(let paquete of paquetes) {
             if(paquete.origen.toLowerCase() === origen.toLowerCase()
             && paquete.destino.toLowerCase() === destino.toLowerCase()
@@ -106,14 +97,3 @@ function filtrarPaquetes(origen, destino, fechaIda, fechaVuelta, cantidadExcursi
     
     return paquetesFiltrados;
 }
-// function getExcursionPorUbicacionFecha(ubicacion, fecha) {
-//     let excursiones = getExcursiones();
-
-//     for(let excursion of excursiones) {
-//         if(excursion.ubicacion.toLowerCase === ubicacion.toLowerCase && excursion.fecha === fecha) {
-//             return excursion;
-//         }
-//     }
-
-//     return {};
-// }

@@ -1,216 +1,83 @@
 // Formato Fecha yyyy/mm/dd
 
+function Excursion(ubicacion, descripcion, fecha){
+    this.ubicacion = ubicacion;
+    this.descripcion = descripcion;
+    this.fecha = fecha;
+}
+
+function Pasaje(origen, destino, fechaIda, fechaVuelta, cantidadPasajes){
+    this.origen = origen;
+    this.destino = destino;
+    this.fechaIda = fechaIda;
+    this.fechaVuelta = fechaVuelta;
+    this.cantidadPasajes = cantidadPasajes;
+}
+
+function Paquete(origen, destino, fechaIda, fechaVuelta, excursiones){
+    this.origen = origen;
+    this.destino = destino;
+    this.fechaIda = fechaIda;
+    this.fechaVuelta = fechaVuelta;
+    this.excursiones = excursiones;
+}
 let excursiones = [
-    {
-        'ubicacion': 'Misiones',
-        'descripcion': 'Excursion a la selva misionera',
-        'fecha': '2023-02-11'
-    },
-    {
-        'ubicacion': 'Misiones',
-        'descripcion': 'Recorrido por el Parque Nacional Iguazu',
-        'fecha': '2023-02-11'
-    },
-    {
-        'ubicacion': 'Mendoza',
-        'descripcion': 'Recorrido a viñedos mendocinos',
-        'fecha': '2023-06-25'
-    },
-    {
-        'ubicacion': 'Cordoba',
-        'descripcion': 'Recorrido en Villa General Belgrano',
-        'fecha': '2022-12-15'
-    },
-    {
-        'ubicacion': 'Tierra del fuego',
-        'descripcion': 'Excursion a Parque Nacional Tierra del Fuego',
-        'fecha': '2022-11-28'
-    }
+    new Excursion('San Luis', 'Excursión a Circuito Serrano Grande', '2023-06-02'),
+    new Excursion('Misiones', 'Excursion a la selva misionera', '2023-02-11'),
+    new Excursion('Misiones', 'Recorrido por el Parque Nacional Iguazu', '2023-02-11'),
+    new Excursion('Mendoza', 'Recorrido a viñedos mendocinos', '2023-06-25'),
+    new Excursion('Cordoba', 'Recorrido en Villa General Belgrano', '2022-12-15'),
+    new Excursion('Tierra del fuego', 'Excursion a Parque Nacional Tierra del Fuego', '2022-11-28'),
 ]
 
-let pasajesIda = [
-    {
-        'origen': 'Buenos Aires',
-        'destino': 'Jujuy',
-        'fechaIda': '2022-12-12',
-        'cantidadPasajes': 30
-    },
-    {
-        'origen': 'Buenos Aires',
-        'destino': 'Chubut',
-        'fechaIda': '2023-02-11',
-        'cantidadPasajes': 20
-    },
-    {
-        'origen': 'Buenos Aires',
-        'destino': 'Neuquen',
-        'fechaIda': '2023-06-25',
-        'cantidadPasajes': 12
-    },
-    {
-        'origen': 'Buenos Aires',
-        'destino': 'La Pampa',
-        'fechaIda': '2022-12-15',
-        'cantidadPasajes': 25
-    },
-    {
-        'origen': 'Buenos Aires',
-        'destino': 'Tierra del fuego',
-        'fechaIda': '2022-11-28',
-        'cantidadPasajes': 16
-    }
+let pasajes = [
+    // Ida
+    new Pasaje('Buenos Aires', 'Jujuy', '2022-12-12', '', 30),
+    new Pasaje('Buenos Aires', 'Chubut', '2023-02-11', '', 20),
+    new Pasaje('Buenos Aires', 'Neuquen', '2023-06-25', '', 12),
+    new Pasaje('Buenos Aires', 'La Pampa', '2022-12-15', '', 25),
+    new Pasaje('Buenos Aires', 'Tierra del fuego', '2022-11-28', '', 16),
+    // Ida y Vuelta
+    new Pasaje('Chubut', 'Entre rios', '2023-01-12', '2023-01-24', 25),
+    new Pasaje('Buenos Aires', 'Chubut', '2023-04-15', '2023-05-15', 12),
+    new Pasaje('Buenos Aires', 'Neuquen', '2022-12-24', '2023-01-13', 28),
+    new Pasaje('Buenos Aires', 'La Pampa', '2022-11-20', '2022-12-22', 14),
+    new Pasaje('Buenos Aires', 'Tierra del fuego', '2023-02-03', '2023-02-20', 8),
 ]
 
 
-let pasajesIdaVuelta = [
-    {
-        'origen': 'Chubut',
-        'destino': 'Entre rios',
-        'fechaIda': '2023-01-12',
-        'fechaVuelta': '2023-01-24',
-        'cantidadPasajes': 25
-    },
-    {
-        'origen': 'Buenos Aires',
-        'destino': 'Chubut',
-        'fechaIda': '2023-04-15',
-        'fechaVuelta': '2023-05-15',
-        'cantidadPasajes': 12
-    },
-    {
-        'origen': 'Buenos Aires',
-        'destino': 'Neuquen',
-        'fechaIda': '2022-12-24',
-        'fechaVuelta': '2023-01-13',
-        'cantidadPasajes': 28
-    },
-    {
-        'origen': 'Buenos Aires',
-        'destino': 'La Pampa',
-        'fechaIda': '2022-11-20',
-        'fechaVuelta': '2022-12-22',
-        'cantidadPasajes': 14
-    },
-    {
-        'origen': 'Buenos Aires',
-        'destino': 'Tierra del fuego',
-        'fechaIda': '2023-02-03',
-        'fechaVuelta': '2023-02-20',
-        'cantidadPasajes': 8
-    }
+let paquetes = [
+    // Ida
+    new Paquete('Chubut', 'Entre Rios', '2023-01-12', '', 
+    [
+        new Excursion('Entre Rios', 'Recorrido por Parque Nacional El Palmar', '2023-01-15'),
+        new Excursion('Entre Rios', 'Recorrido por Paseo Costanera', '2023-01-18')
+    ]),
+    new Paquete('Salta', 'Chubut', '2023-03-08', '', 
+    [
+        new Excursion('Chubut', 'Excursión a la Península de Valdés', '2023-03-12')
+    ]),  
+    new Paquete('Tierra del fuego', 'Neuquen', '2023-10-18', '', 
+    [
+        new Excursion('Neuquen', 'Excursión a Bariloche', '2023-10-20'),
+        new Excursion('Neuquen', 'Excursión a Villa La Angostura', '2023-10-21'),
+        new Excursion('Neuquen', 'Excursión al Camino de los Siete Lagos', '2023-10-24')
+    ]),  
+    // Ida y Vuelta
+    new Paquete('La Pampa', 'Santiago del Estero', '2023-02-25', '2023-03-05', 
+    [
+        new Excursion('Santiago del Estero', 'Excursión a Termas de Río Hondo', '2023-02-27'),
+        new Excursion('Santiago del Estero', 'Tour por los pueblos de Santiago del Estero', '2023-02-28'),
+        new Excursion('Santiago del Estero', 'Tour por el Estadio Único Madre de Ciudades', '2023-03-03')
+    ]), 
+    new Paquete('Buenos Aires', 'Catamarca', '2023-03-16', '2023-04-01', 
+    [
+        new Excursion('Catamarca', 'Excursión a Circuitos Franciscanos', '2023-03-20'),
+        new Excursion('Catamarca', 'Excursión al Salar de Antofalla', '2023-03-26')
+    ]), 
+    new Paquete('Buenos Aires', 'Mendoza', '2023-06-24', '2023-07-13', 
+    [
+        new Excursion('Mendoza', 'Excursión a bodegas mendocinas', '2023-07-05')
+    ]), 
 ]
 
-let paquetesIda = [
-    {
-        'origen': 'Chubut',
-        'destino': 'Entre Rios',
-        'fechaIda': '2023-01-12',
-        'excursiones': [
-            {
-                'ubicacion': 'Entre Rios',
-                'descripcion': 'Recorrido por Parque Nacional El Palmar',
-                'fecha': '2023-01-15'
-            },
-            {
-                'ubicacion': 'Entre Rios',
-                'descripcion': 'Recorrido por Paseo Costanera',
-                'fecha': '2023-01-18'
-            }
-        ]
-        
-    },
-    {
-        'origen': 'Salta',
-        'destino': 'Chubut',
-        'fechaIda': '2023-03-08',
-        'excursiones': [
-            {
-                'ubicacion': 'Chubut',
-                'descripcion': 'Excursión a la Península de Valdés',
-                'fecha': '2023-03-12'
-            }
-        ]
-    },
-    {
-        'origen': 'Tierra del fuego',
-        'destino': 'Neuquen',
-        'fechaIda': '2023-10-18',
-        'excursiones': [
-            {
-                'ubicacion': 'Neuquen',
-                'descripcion': 'Excursión a Bariloche',
-                'fecha': '2023-10-20'
-            },
-            {
-                'ubicacion': 'Neuquen',
-                'descripcion': 'Excursión a Villa La Angostura',
-                'fecha': '2023-10-21'
-            },
-            {
-                'ubicacion': 'Neuquen',
-                'descripcion': 'Excursión al Camino de los Siete Lagos',
-                'fecha': '2023-10-24'
-            }
-        ]
-    }
-]
-
-let paquetesIdaVuelta = [
-    {
-        'origen': 'La Pampa',
-        'destino': 'Santiago del Estero',
-        'fechaIda': '2023-02-25',
-        'fechaVuelta': '2023-03-05',
-        'excursiones':
-            [
-                {
-                    'ubicacion': 'Santiago del Estero',
-                    'descripcion': 'Excursión a Termas de Río Hondo',
-                    'fecha': '2023-02-27'
-                },
-                {
-                    'ubicacion': 'Santiago del Estero',
-                    'descripcion': 'Tour por los pueblos de Santiago del Estero',
-                    'fecha': '2023-02-28'
-                },
-                {
-                    'ubicacion': 'Santiago del Estero',
-                    'descripcion': 'Tour por el Estadio Único Madre de Ciudades',
-                    'fecha': '2023-03-03'
-                }
-            ]
-    },
-    {
-        'origen': 'Buenos Aires',
-        'destino': 'Catamarca',
-        'fechaIda': '2023-03-16',
-        'fechaVuelta': '2023-04-01',
-        'excursiones':
-            [
-                {
-                    'ubicacion': 'Catamarca',
-                    'descripcion': 'Excursión a Circuitos Franciscanos',
-                    'fecha': '2023-03-20'
-                },
-                {
-                    'ubicacion': 'Catamarca',
-                    'descripcion': 'Excursión al Salar de Antofalla',
-                    'fecha': '2023-03-26'
-                }
-            ]
-    },
-    {
-        'origen': 'Buenos Aires',
-        'destino': 'Mendoza',
-        'fechaIda': '2023-06-24',
-        'fechaVuelta': '2023-07-13',
-        'excursiones':
-            [
-                {
-                    'ubicacion': 'Mendoza',
-                    'descripcion': 'Excursión a Bariloche',
-                    'fecha': '2023-06-28'
-                }
-            ]
-    }
-]
