@@ -10,7 +10,6 @@ function getPaquetes(){
     return paquetes;
 }
 
-
 function filtrarExcursionesPorUbicacionYFecha(ubicacion, fecha){
     let excursiones = [];
 
@@ -21,11 +20,6 @@ function filtrarExcursionesPorUbicacionYFecha(ubicacion, fecha){
     }
     return excursiones;
 }
-
-/*no está mal la logica, pero haria un pequeño cambio:
-en datosStyleBus, pondria la cantidad de PASAJES disponibles y no pasajeros,
-y que a la hora filtrar la cantidad de pasajeros no supere la cantidad de pasajes disponibles,
-si los supera y/o no existe la busqueda estaria bueno mostrar un mensajito diciendo que no hay coincidencias*/
 
 function filtrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajeros){
     let pasajes = getPasajes();
