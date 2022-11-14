@@ -93,8 +93,29 @@ function mostrarExcursiones(ubicacion, fecha) {
         for (let excursion of excursiones) {
             var li = document.createElement('li');
             var button = document.createElement('button');
+            button.style.cssText = `
+            height: 30px; 
+            padding-left: 5px;
+            padding-right: 5px;  
+            margin: 20px auto; 
+            text-transform: uppercase;
+            background-color:#151750;
+            border-style: solid; 
+            border-radius: 10px;  
+            width: 150px;   
+            cursor: pointer;
+            transition: 0.5s all;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            cursor: pointer;
+            transition: 0.5s all;
+            border: none;
+            `;
+
             button.textContent = 'Agregar a carrito';
-            
 
             li.innerHTML = 
             "Ubicación: " + excursion.ubicacion + "<br>" + 
@@ -133,6 +154,28 @@ function mostrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajero
         for (let pasaje of pasajes) {
             var li = document.createElement('li');
             var button = document.createElement('button');
+            button.style.cssText = `
+            height: 30px; 
+            padding-left: 5px;
+            padding-right: 5px;  
+            margin: 20px auto; 
+            text-transform: uppercase;
+            background-color:#151750;
+            border-style: solid; 
+            border-radius: 10px;  
+            width: 150px;   
+            cursor: pointer;
+            transition: 0.5s all;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            cursor: pointer;
+            transition: 0.5s all;
+            border: none;
+            `;
+
             button.textContent = 'Agregar a carrito';
 
             if(fechaVuelta === '') {
@@ -175,6 +218,28 @@ function mostrarPaquetes(origen, destino, fechaIda, fechaVuelta, cantidadExcursi
         for (let paquete of paquetes) {
             var li = document.createElement('li');
             var button = document.createElement('button');
+            button.style.cssText = `
+            height: 30px; 
+            padding-left: 5px;
+            padding-right: 5px;  
+            margin: 20px auto; 
+            text-transform: uppercase;
+            background-color:#151750;
+            border-style: solid; 
+            border-radius: 10px;  
+            width: 150px;   
+            cursor: pointer;
+            transition: 0.5s all;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            cursor: pointer;
+            transition: 0.5s all;
+            border: none;
+            `;
+
             button.textContent = 'Agregar a carrito';
 
             if(fechaVuelta === '') {

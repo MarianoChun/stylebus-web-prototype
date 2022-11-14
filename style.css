@@ -102,6 +102,7 @@ h2 {
   box-shadow: 10px 5px 5px 5px rgba(0, 0, 0, 0.221);
   background-color: #5a5ba8;
 }
+
 .btn-buscar {
   height: 45px; 
   padding-left: 5px;
@@ -125,7 +126,7 @@ h2 {
 }
 
 .btn-buscar:hover{
-  background-color:#2629ce;
+  background-color:#5c5eda;
   transform: scale(1.02);
   color: white;
   border: none;
@@ -161,6 +162,15 @@ nav li {
 .nav-principal a:hover {
   color:rgba(142, 162, 228, 0.658);
   font-size: 20px;
+}
+
+footer {
+  position: absolute;
+  margin-top: 20px;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  text-align: center;
 }
 
 /*estilos proximamente.html*/
@@ -215,4 +225,33 @@ nav li {
   padding: 30px 20px;
   box-shadow: 10px 5px 5px 5px rgba(0, 0, 0, 0.221);
   background-color: #a6a7ee;
+}
+
+.boton-carrito {
+  height: 30px; 
+  padding-left: 5px;
+  padding-right: 5px;  
+  margin: 20px auto; 
+  text-transform: uppercase;
+  background-color:#151750;
+  border-style: solid; 
+  border-radius: 10px;  
+  width: 150px;   
+  cursor: pointer;
+  transition: 0.5s all;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.5s all;
+  border: none;
+}
+
+.boton-carrito:hover {
+  background-color:#5c5eda;
+  transform: scale(1.02);
+  color: white;
+  border: none;
 }
