@@ -33,31 +33,31 @@ let pasajesIda = [
         'origen': 'Buenos Aires',
         'destino': 'Jujuy',
         'fechaIda': '2022-12-12',
-        'cantidadPasajeros': 2
+        'cantidadPasajes': 30
     },
     {
         'origen': 'Buenos Aires',
         'destino': 'Chubut',
         'fechaIda': '2023-02-11',
-        'cantidadPasajeros': 4
+        'cantidadPasajes': 20
     },
     {
         'origen': 'Buenos Aires',
         'destino': 'Neuquen',
         'fechaIda': '2023-06-25',
-        'cantidadPasajeros': 3
+        'cantidadPasajes': 12
     },
     {
         'origen': 'Buenos Aires',
         'destino': 'La Pampa',
         'fechaIda': '2022-12-15',
-        'cantidadPasajeros': 2
+        'cantidadPasajes': 25
     },
     {
         'origen': 'Buenos Aires',
         'destino': 'Tierra del fuego',
         'fechaIda': '2022-11-28',
-        'cantidadPasajeros': 1
+        'cantidadPasajes': 16
     }
 ]
 
@@ -68,35 +68,35 @@ let pasajesIdaVuelta = [
         'destino': 'Entre rios',
         'fechaIda': '2023-01-12',
         'fechaVuelta': '2023-01-24',
-        'cantidadPasajeros': 3
+        'cantidadPasajes': 25
     },
     {
         'origen': 'Buenos Aires',
         'destino': 'Chubut',
         'fechaIda': '2023-04-15',
         'fechaVuelta': '2023-05-15',
-        'cantidadPasajeros': 1
+        'cantidadPasajes': 12
     },
     {
         'origen': 'Buenos Aires',
         'destino': 'Neuquen',
         'fechaIda': '2022-12-24',
         'fechaVuelta': '2023-01-13',
-        'cantidadPasajeros': 2
+        'cantidadPasajes': 28
     },
     {
         'origen': 'Buenos Aires',
         'destino': 'La Pampa',
         'fechaIda': '2022-11-20',
         'fechaVuelta': '2022-12-22',
-        'cantidadPasajeros': 4
+        'cantidadPasajes': 14
     },
     {
         'origen': 'Buenos Aires',
         'destino': 'Tierra del fuego',
         'fechaIda': '2023-02-03',
         'fechaVuelta': '2023-02-20',
-        'cantidadPasajeros': 2
+        'cantidadPasajes': 8
     }
 ]
 

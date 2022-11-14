@@ -23,12 +23,10 @@ function filtrarExcursionesPorUbicacionYFecha(ubicacion, fecha){
     let excursiones = [];
 
     for(let excursion of getExcursiones()) {
-        if(excursion.ubicacion.toLowerCase() === ubicacion.toLowerCase() || excursion.fecha === fecha) {
-            
+        if(excursion.ubicacion.toLowerCase() === ubicacion.toLowerCase() || excursion.fecha === fecha) {      
             excursiones.push(excursion);
         }
     }
-
     return excursiones;
 }
 
@@ -40,7 +38,6 @@ si los supera y/o no existe la busqueda estaria bueno mostrar un mensajito dicie
 function filtrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajeros){
     let pasajes = [];
     let pasajesFiltrados = [];
-
     if(fechaVuelta == ''){
         console.log("fecha vuelta vacia");
         pasajes = getPasajesIda();
@@ -49,7 +46,9 @@ function filtrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajero
             if(pasaje.origen.toLowerCase() === origen.toLowerCase()
             && pasaje.destino.toLowerCase() === destino.toLowerCase()
             && pasaje.fechaIda === fechaIda
-            && pasaje.cantidadPasajeros === parseInt(cantidadPasajeros)) {
+            && pasaje.cantidadPasajes >= parseInt(cantidadPasajeros)) {
+                pasaje.cantidadPasajes -= cantidadPasajeros;
+                console.log(pasaje.cantidadPasajes);
                 pasajesFiltrados.push(pasaje);
             }
         }
@@ -61,7 +60,9 @@ function filtrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajero
             && pasaje.destino.toLowerCase() === destino.toLowerCase()
             && pasaje.fechaIda === fechaIda
             && pasaje.fechaVuelta === fechaVuelta
-            && pasaje.cantidadPasajeros === parseInt(cantidadPasajeros)) {
+            && pasaje.cantidadPasajes >=  parseInt(cantidadPasajeros)) {
+                pasaje.cantidadPasajes -= cantidadPasajeros;
+                console.log(pasaje.cantidadPasajes);
                 pasajesFiltrados.push(pasaje);
                 console.log("pasa ida vuelta push");
             }

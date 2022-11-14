@@ -123,14 +123,14 @@ function mostrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajero
                 "Origen: " + pasaje.origen + "<br>" + 
                 "Destino: " + pasaje.destino + "<br>" + 
                 "Fecha ida: " + pasaje.fechaIda + "<br>" +
-                "Cantidad de pasajeros: " + pasaje.cantidadPasajeros + "<br>";
+                "Cantidad de pasajeros: " + cantidadPasajeros + "<br>";
             } else {
                 li.innerHTML = 
                 "Origen: " + pasaje.origen + "<br>" + 
                 "Destino: " + pasaje.destino + "<br>" + 
                 "Fecha ida: " + pasaje.fechaIda + "<br>" +
                 "Fecha vuelta: " + pasaje.fechaVuelta + "<br>" + 
-                "Cantidad de pasajeros: " + pasaje.cantidadPasajeros + "<br>";
+                "Cantidad de pasajeros: " + cantidadPasajeros + "<br>";
             }
 
             li.appendChild(button);
