@@ -88,6 +88,20 @@ h2 {
   border: none;
 }
 
+.li-lista-productos{
+  color: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;    
+  padding: 30px 20px;
+  box-shadow: 10px 5px 5px 5px rgba(0, 0, 0, 0.221);
+  background-color: #5a5ba8;
+}
 .btn-buscar {
   height: 45px; 
   padding-left: 5px;
@@ -179,4 +193,26 @@ nav li {
   text-decoration: none;
   color: #7374d5;
   margin-bottom: 3px;
+}
+
+/* Carrito de compras */
+#cabecera-lista-carrito{
+  text-align: left;
+  font-size: 30px;
+  
+}
+
+.container-productos-carrito{
+  color: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  margin: 5px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;    
+  padding: 30px 20px;
+  box-shadow: 10px 5px 5px 5px rgba(0, 0, 0, 0.221);
+  background-color: #a6a7ee;
 }

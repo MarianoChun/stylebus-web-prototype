@@ -1,3 +1,5 @@
+var productosCarrito = [];
+
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("filtro-paquetes").style.display = "none";
     document.getElementById("filtro-excursiones").style.display = "none";
@@ -18,6 +20,17 @@ document.getElementById("radio-paquete-ida-vuelta").addEventListener("click", fu
 document.getElementById("radio-paquete-ida").addEventListener("click", function () {
     deshabilitarCampoPaqueteVuelta();
 });
+
+document.getElementById("boton-carrito").addEventListener("click", function () {
+    console.log(productosCarrito);
+    localStorage.setItem("texto-carrito", JSON.stringify(productosCarrito));
+});
+
+function agregarACarrito(boton, contenidoProducto){
+    boton.addEventListener("click", () => {
+        productosCarrito.push(contenidoProducto);
+    });
+}
 
 function habilitarCampoPasajeVuelta() {
     var checkFecha = document.getElementById("pasaje-fecha-vuelta");
@@ -81,11 +94,15 @@ function mostrarExcursiones(ubicacion, fecha) {
             var li = document.createElement('li');
             var button = document.createElement('button');
             button.textContent = 'Agregar a carrito';
+            
 
             li.innerHTML = 
             "Ubicación: " + excursion.ubicacion + "<br>" + 
             "Descripción: " + excursion.descripcion + "<br>" + 
             "Fecha: " + excursion.fecha + "<br>";
+
+            agregarACarrito(button, li.innerHTML);
+            li.className = "li-lista-productos";
             li.appendChild(button);
             ul.appendChild(li);
         }
@@ -133,6 +150,7 @@ function mostrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajero
                 "Cantidad de pasajeros: " + cantidadPasajeros + "<br>";
             }
 
+            agregarACarrito(button, li.innerHTML);
             li.appendChild(button);
             ul.appendChild(li);
         }
@@ -174,6 +192,7 @@ function mostrarPaquetes(origen, destino, fechaIda, fechaVuelta, cantidadExcursi
                 getExcursionesString(paquete.excursiones);
             }
 
+            agregarACarrito(button, li.innerHTML);
             li.appendChild(button);
             ul.appendChild(li);
         }

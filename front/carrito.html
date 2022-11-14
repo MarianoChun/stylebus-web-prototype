@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Carrito de compras</title>
+    
+    
+</head>
+
+<body>
+    
+    <div class="container-productos-carrito">
+    
+        <h2 id="cabecera-lista-carrito"> Carrito </h2>
+        <div class="lista-productos-carrito" id="carrito">
+            <ul id="lista-productos">
+
+            </ul>
+            <script>
+                let contenidoProductos = JSON.parse(localStorage.getItem("texto-carrito"));
+
+                if (contenidoProductos) {
+                    for(let i = 0; i < contenidoProductos.length; i++) {
+                        let li = document.createElement('li');
+                        li.innerHTML = contenidoProductos[i];
+                        li.className = "li-lista-productos";
+                        document.querySelector('#lista-productos').appendChild(li);
+                    }
+                }
+
+                
+            </script>
+        </div>
+        <button>Comprar</button>
+    </div> 
+    <div style="text-align: center; padding: 10px;">
+        <a href="index.html">Volver a inicio</a>
+    </div> 
+
+    
+</body>
+
+
+</html>
