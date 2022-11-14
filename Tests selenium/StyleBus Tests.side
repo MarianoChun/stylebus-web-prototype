@@ -1303,6 +1303,164 @@
       ],
       "value": "Origen: Tierra del fuego\\nDestino: Neuquen\\nFecha ida: 2023-10-18\\nExcursiones: \\n    Excursión a Bariloche \\n    Excursión a Villa La Angostura \\n    Excursión al Camino de los Siete Lagos \\nAgregar a carrito"
     }]
+  }, {
+    "id": "438a83af-daa7-4699-933f-0b339041efd7",
+    "name": "Agregar al carrito",
+    "commands": [{
+      "id": "a5db4469-1b91-4628-81e1-0fa0b73fe757",
+      "comment": "",
+      "command": "open",
+      "target": "https://marianochun.gitlab.io/prototipo-web-stylebus/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e01d88a7-2b42-4d2f-bd2b-9e186f7f81f7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "626c6f86-52cf-4900-b29c-953bfa446144",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Excursiones",
+      "targets": [
+        ["linkText=Excursiones", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Excursiones')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#excursiones')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Excursiones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "28fdeaa3-cfc6-400a-b198-eddd366fdd8a",
+      "comment": "",
+      "command": "click",
+      "target": "id=ubicacion-excursion",
+      "targets": [
+        ["id=ubicacion-excursion", "id"],
+        ["css=#ubicacion-excursion", "css:finder"],
+        ["xpath=//input[@id='ubicacion-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8d6d318-16a3-4099-8f5e-e678eb7d3be1",
+      "comment": "",
+      "command": "type",
+      "target": "id=ubicacion-excursion",
+      "targets": [
+        ["id=ubicacion-excursion", "id"],
+        ["css=#ubicacion-excursion", "css:finder"],
+        ["xpath=//input[@id='ubicacion-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/label/input", "xpath:position"]
+      ],
+      "value": "Tierra del Fuego"
+    }, {
+      "id": "ef1646c1-3315-4f6e-989a-df566f28c587",
+      "comment": "",
+      "command": "click",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa386133-ee54-4f99-ae11-6ffe4379af6b",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-excursion",
+      "targets": [
+        ["id=fecha-excursion", "id"],
+        ["css=#fecha-excursion", "css:finder"],
+        ["xpath=//input[@id='fecha-excursion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/div/div[2]/label/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/input", "xpath:position"]
+      ],
+      "value": "2022-11-28"
+    }, {
+      "id": "be36f0b4-63c9-4df3-aa60-165cb00a8d3a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a979d7a9-d8b1-491f-8224-7a7fed87cae5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3396631e-fa6b-402a-8682-73788a7d0b9b",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn-buscar:nth-child(3)",
+      "targets": [
+        ["css=.btn-buscar:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@value='🔍︎ Buscar'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='filtro-excursiones']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2884566-11dd-441e-b7d8-fc6f8325c73f",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//div[@id='lista-excursiones']/ul/li/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar a carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "57ec31fb-1ba9-4365-b172-1603015f899d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Carrito de compras",
+      "targets": [
+        ["linkText=Carrito de compras", "linkText"],
+        ["css=#boton-carrito > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Carrito de compras')]", "xpath:link"],
+        ["xpath=//li[@id='boton-carrito']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'carrito.html')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Carrito de compras')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3db5d059-6716-4453-9750-2895883e4482",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Comprar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "0cdaed60-30c6-4471-94aa-ffb0f2200990",
