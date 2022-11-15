@@ -1429,6 +1429,146 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "6c0aa066-ddb6-49ed-9e34-dc87c0f44541",
+    "name": "Login Fail",
+    "commands": [{
+      "id": "5d58ac47-0db5-4430-a5d0-cb62e152e5b6",
+      "comment": "",
+      "command": "open",
+      "target": "https://marianochun.gitlab.io/prototipo-web-stylebus/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34470f0f-d992-4276-960d-63992a864051",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4cc86e4-610c-4282-be57-b2652694f1ec",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar sesión",
+      "targets": [
+        ["linkText=Iniciar sesión", "linkText"],
+        ["css=.nav-autogestion li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'login.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "337b82b5-ad35-4743-a458-b48a24e38e02",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=usuario", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "alvarado@gail.com"
+    }, {
+      "id": "4e0dc96e-97db-4d84-8e0e-a7bdaafb7e21",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d386a95-62a3-4008-a9be-8fe0c0eafb3a",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Hola123!"
+    }, {
+      "id": "bbbe1763-5473-4a1e-af9d-e8508c8ce097",
+      "comment": "",
+      "command": "click",
+      "target": "id=logueo",
+      "targets": [
+        ["id=logueo", "id"],
+        ["name=Ingresar", "name"],
+        ["css=#logueo", "css:finder"],
+        ["xpath=//button[@id='logueo']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27ec1318-3dd9-4c27-8077-2b06cc7f8129",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Usuario invalido. Te quedan 2 intentos.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bf1a0b1-ec9d-43c5-b8b8-b0acec1f5a46",
+      "comment": "",
+      "command": "click",
+      "target": "id=logueo",
+      "targets": [
+        ["id=logueo", "id"],
+        ["name=Ingresar", "name"],
+        ["css=#logueo", "css:finder"],
+        ["xpath=//button[@id='logueo']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdb96e83-e5e2-462b-9c52-fb5827ba63ea",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Usuario invalido. Te quedan 1 intentos.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f492963-bb80-4123-bd63-3ee7201eaa08",
+      "comment": "",
+      "command": "click",
+      "target": "id=logueo",
+      "targets": [
+        ["id=logueo", "id"],
+        ["name=Ingresar", "name"],
+        ["css=#logueo", "css:finder"],
+        ["xpath=//button[@id='logueo']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7330db7-05b7-46c1-a62d-93ce84bafbde",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Usuario bloqueado.",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "0cdaed60-30c6-4471-94aa-ffb0f2200990",
