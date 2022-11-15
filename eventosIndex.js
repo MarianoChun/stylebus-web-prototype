@@ -120,8 +120,8 @@ function mostrarExcursiones(ubicacion, fecha) {
             li.innerHTML = 
             "Ubicación: " + excursion.ubicacion + "<br>" + 
             "Descripción: " + excursion.descripcion + "<br>" + 
-            "Fecha: " + excursion.fecha + "<br>";
-
+            "Fecha: " + excursion.fecha + "<br>" +
+            "Precio: $" + excursion.precio + "<br>";
             agregarACarrito(button, li.innerHTML);
             li.className = "li-lista-productos";
             li.appendChild(button);
@@ -183,14 +183,16 @@ function mostrarPasajes(origen, destino, fechaIda, fechaVuelta, cantidadPasajero
                 "Origen: " + pasaje.origen + "<br>" + 
                 "Destino: " + pasaje.destino + "<br>" + 
                 "Fecha ida: " + pasaje.fechaIda + "<br>" +
-                "Cantidad de pasajeros: " + cantidadPasajeros + "<br>";
+                "Cantidad de pasajeros: " + cantidadPasajeros + "<br>" +
+                "Precio: $" + pasaje.precio + "<br>";
             } else {
                 li.innerHTML = 
                 "Origen: " + pasaje.origen + "<br>" + 
                 "Destino: " + pasaje.destino + "<br>" + 
                 "Fecha ida: " + pasaje.fechaIda + "<br>" +
                 "Fecha vuelta: " + pasaje.fechaVuelta + "<br>" + 
-                "Cantidad de pasajeros: " + cantidadPasajeros + "<br>";
+                "Cantidad de pasajeros: " + cantidadPasajeros + "<br>" +
+                "Precio: $" + pasaje.precio + "<br>";
             }
 
             agregarACarrito(button, li.innerHTML);
@@ -247,14 +249,16 @@ function mostrarPaquetes(origen, destino, fechaIda, fechaVuelta, cantidadExcursi
                 "Origen: " + paquete.origen + "<br>" + 
                 "Destino: " + paquete.destino + "<br>" + 
                 "Fecha ida: " + paquete.fechaIda + "<br>" +
-                getExcursionesString(paquete.excursiones);
+                getExcursionesString(paquete.excursiones) + "<br>" +
+                "Precio: $" + paquete.precio + "<br>";
             } else {
                 li.innerHTML = 
                 "Origen: " + paquete.origen + "<br>" + 
                 "Destino: " + paquete.destino + "<br>" + 
                 "Fecha ida: " + paquete.fechaIda + "<br>" +
                 "Fecha vuelta: " + paquete.fechaVuelta + "<br>" + 
-                getExcursionesString(paquete.excursiones);
+                getExcursionesString(paquete.excursiones) + "<br>" +
+                "Precio: $" + paquete.precio + "<br>";
             }
 
             agregarACarrito(button, li.innerHTML);
