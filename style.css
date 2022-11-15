@@ -164,13 +164,14 @@ nav li {
   font-size: 20px;
 }
 
-.footer {
-  position: absolute;
+footer {
   margin-top: 20px;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 40px;
   text-align: center;
+  position: relative;
 }
 
 /*estilos proximamente.html*/
