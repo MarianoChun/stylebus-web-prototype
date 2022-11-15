@@ -120,3 +120,20 @@
   font-family: 'Overpass', sans-serif;
   font-size: 15px;
 }
+
+.inferior {
+  margin-top: 10px;
+  font-size: 90%;
+  text-align: center;
+}
+
+.inferior a {
+  display: block;
+  text-decoration: none;
+  color: #03045E;
+  margin-bottom: 3px;
+}
+
+.inferior a:hover {
+  color: #5658db;
+}
