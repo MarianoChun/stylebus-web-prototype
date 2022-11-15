@@ -21,14 +21,25 @@ document.getElementById("radio-paquete-ida").addEventListener("click", function 
     deshabilitarCampoPaqueteVuelta();
 });
 
-document.getElementById("boton-carrito").addEventListener("click", function () {
+document.getElementById("carrito-nav").addEventListener("click", function () {
     console.log(productosCarrito);
     sessionStorage.setItem("texto-carrito", JSON.stringify(productosCarrito));
 });
 
+function alertaProductosCarrito(contenidoProducto) {
+    var productos = JSON.parse(sessionStorage.getItem("productos-carrito"));
+
+    if (productos) {
+        if (!productos.includes(contenidoProducto)) {
+            alert("Producto agregado a carrito");
+        }
+    }
+}
+
 function agregarACarrito(boton, contenidoProducto){
     boton.addEventListener("click", () => {
-        productosCarrito.push(contenidoProducto);
+        productosCarrito.push(contenidoProducto);   
+        alertaProductosCarrito(contenidoProducto);
     });
 }
 
@@ -285,6 +296,7 @@ function getExcursionesString(excursiones){
     excursionesString += "<pre>";
     return excursionesString;
 }
+
 function eliminarDiv(nombreDiv) {
     var div = document.getElementById(nombreDiv);
     if (div != null) {

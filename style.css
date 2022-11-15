@@ -228,7 +228,7 @@ footer {
   background-color: #a6a7ee;
 }
 
-.boton-carrito {
+.boton-comprar {
   height: 30px; 
   padding-left: 5px;
   padding-right: 5px;  
@@ -250,7 +250,7 @@ footer {
   border: none;
 }
 
-.boton-carrito:hover {
+.boton-comprar:hover {
   background-color:#5c5eda;
   transform: scale(1.02);
   color: white;

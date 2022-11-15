@@ -22,11 +22,10 @@
             </ul>
             <script>
                 var productosCarrito = JSON.parse(sessionStorage.getItem("productos-carrito"));
-                if(productosCarrito == null) {
+                if (productosCarrito == null) {
                     productosCarrito = [];
                 }
                 let contenidoProductos = JSON.parse(sessionStorage.getItem("texto-carrito"));
-
 
                 if (contenidoProductos) {
                     for (let i = 0; i < contenidoProductos.length; i++) {
@@ -36,7 +35,6 @@
                     }
                     sessionStorage.setItem("productos-carrito", JSON.stringify(productosCarrito));
                 }
-                
 
                 if (productosCarrito) {
                     productosCarrito.forEach(producto => {
@@ -49,14 +47,11 @@
 
             </script>
         </div>
-        <button class="boton-carrito">Comprar</button>
+        <button class="boton-comprar">Comprar</button>
     </div> 
+
     <div style="text-align: center; padding: 10px;">
         <a href="index.html">Volver a inicio</a>
     </div>
-    
-    
     </body>
-
-
 </html>
