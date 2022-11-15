@@ -23,7 +23,7 @@ document.getElementById("radio-paquete-ida").addEventListener("click", function 
 
 document.getElementById("boton-carrito").addEventListener("click", function () {
     console.log(productosCarrito);
-    localStorage.setItem("texto-carrito", JSON.stringify(productosCarrito));
+    sessionStorage.setItem("texto-carrito", JSON.stringify(productosCarrito));
 });
 
 function agregarACarrito(boton, contenidoProducto){

@@ -13,37 +13,50 @@
 </head>
 
 <body>
-    
     <div class="container-productos-carrito">
     
         <h2 id="cabecera-lista-carrito"> Carrito </h2>
         <div class="lista-productos-carrito" id="carrito">
             <ul id="lista-productos">
-
+    
             </ul>
             <script>
-                let contenidoProductos = JSON.parse(localStorage.getItem("texto-carrito"));
+                var productosCarrito = JSON.parse(sessionStorage.getItem("productos-carrito"));
+                if(productosCarrito == null) {
+                    productosCarrito = [];
+                }
+                let contenidoProductos = JSON.parse(sessionStorage.getItem("texto-carrito"));
+
 
                 if (contenidoProductos) {
-                    for(let i = 0; i < contenidoProductos.length; i++) {
+                    for (let i = 0; i < contenidoProductos.length; i++) {
+                        if (!productosCarrito.includes(contenidoProductos[i])) {
+                            productosCarrito.push(contenidoProductos[i]);
+                        }
+                    }
+                    sessionStorage.setItem("productos-carrito", JSON.stringify(productosCarrito));
+                }
+                
+
+                if (productosCarrito) {
+                    productosCarrito.forEach(producto => {
                         let li = document.createElement('li');
-                        li.innerHTML = contenidoProductos[i];
+                        li.innerHTML = producto;
                         li.className = "li-lista-productos";
                         document.querySelector('#lista-productos').appendChild(li);
-                    }
+                    });
                 }
 
-                
             </script>
         </div>
         <button class="boton-carrito">Comprar</button>
     </div> 
     <div style="text-align: center; padding: 10px;">
         <a href="index.html">Volver a inicio</a>
-    </div> 
-
+    </div>
     
-</body>
+    
+    </body>
 
 
 </html>
